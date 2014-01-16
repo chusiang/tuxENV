@@ -1,0 +1,15 @@
+[Desktop Entry]
+
+Version=1.0
+Encoding=UTF-8
+Name=URxvt
+Comment=RXVT-like terminal emulator with Unicode support
+TryExec=rxvt-unicode
+Exec=/usr/bin/rxvt-unicode +tr
+Terminal=false
+X-MultipleArgs=false
+Icon=128x128terminal.png
+Type=Application
+Categories=GNOME;GTK;Utility;TerminalEmulator;
+StartupNotify=true
+

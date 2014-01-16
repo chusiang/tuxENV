@@ -1,0 +1,30 @@
+[user]
+	name = chusiang
+	email = chusiang.lai@gmail.com
+
+[color]
+	diff = auto
+	status = auto
+	branch = auto
+	log = auto
+
+[diff]
+    external = git_diff_wrapper
+
+[core]
+    pager = 
+
+[alias]
+	co = checkout
+	cm = commit
+	recm = commit --amend
+	di = diff
+	df = diff
+	st = status
+	br = branch
+	re = remote
+	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	me = merge --no-ff
+	mg = merge --no-ff
+	nfmerge = merge --no-ff
+	resetToFront = reset --soft HEAD^

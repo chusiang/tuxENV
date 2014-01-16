@@ -1,0 +1,20 @@
+numlockx &
+
+# Merge X resources from ~/.Xdefaults
+[ -f $HOME/.Xdefaults ] && xrdb $HOME/.Xdefaults
+
+# Set the background and root cursor shape
+feh --bg-scale -Z /home/jonny/dropbox/Photos/wallpaper/debian/thinkpad-debian.png
+xsetroot -cursor_name left_ptr
+
+# switch ctrl, caps lock
+/usr/bin/setxkbmap -option "ctrl:swapcaps"
+
+# Keys binding
+xbindkeys &
+
+hime &
+
+# Start evilwm
+#/usr/bin/evilwm
+/usr/bin/evilwm -term terminator

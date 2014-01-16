@@ -1,0 +1,15 @@
+#!/bin/bash
+# switch TouchPad.
+# adapted from http://forums.gentoo.org/viewtopic-p-6241953.html?sid=815e3e5f2bb9ccfbef0c8ff6cb37914b#6241953
+
+#if synclient -l | grep -q TouchpadOff[^[:alnum:]]*0 ; then
+
+if [ $( synclient -l | grep TouchpadOff | awk '{ print $3 }' ) = 0 ] ; then
+	synclient TouchpadOff=1
+	status="'UltraNav TrackPad' 'Touch has been disabled'"
+	echo "notify-send -t 2000 -i touchpad-disabled $status" | bash
+else
+        synclient TouchpadOff=0
+	status="'UltraNav TrackPad' 'Touch has been enabled'"
+	echo "notify-send -t 2000 -i touchpad-enabled $status" | bash
+fi

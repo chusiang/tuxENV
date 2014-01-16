@@ -1,0 +1,10 @@
+#!/bin/bash
+# show Num-Lock status.
+
+if [ $( xset q | grep Num | awk '{ print $8 }' ) = off ]; then
+	STATUS="'Lock keys' 'Num-Lock has been disabled'";
+        echo "notify-send -t 2000 -i $HOME/.icons/lock-keys/numlock_off.png  $STATUS" | bash		
+else
+	STATUS="'Lock keys' 'Num-Lock has been enabled'";
+        echo "notify-send -t 2000 -i $HOME/.icons/lock-keys/numlock_on.png  $STATUS" | bash		
+fi

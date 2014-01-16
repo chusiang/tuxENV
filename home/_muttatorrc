@@ -1,0 +1,10 @@
+"0.6 (created: 2010/03/29 00:59:39)
+
+map <F7> :set<Space>guioptions+=m<Space><Return>
+map <F8> :set<Space>guioptions=fF<Space><Return>
+
+set guioptions=f
+
+source! /home/jonny/.muttatorrc.local
+
+" vim: set ft=muttator:

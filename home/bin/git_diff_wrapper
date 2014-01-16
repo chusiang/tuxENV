@@ -1,0 +1,6 @@
+#!/bin/sh
+# Filename: git_diff_wrapper
+# Info: use vimdiff to replace git diff.
+
+vimdiff "$2" "$5" 
+

@@ -1,0 +1,112 @@
+# 這個檔案是按 alt-shift-??? 時會送出的字串。
+# 第一個字母如果是大寫，代表如果 CapsLock 打開時會用的片語。
+
+a http://note.drx.tw
+A <a href="http://note.drx.tw" target="_blank">Ubuntu Note</a>
+b <br />
+B <b>  </b>
+c <blockquote>  </blockquote>
+C <span style="background-color: white; border-radius: 5pt 5pt 5pt 5pt; border: 3pt outset rgb(136, 136, 136); color: #444444; font-family: sans-serif; font-size: smaller; font-weight: bold; padding: 0px 2px 1px; text-align: center; vertical-align: middle;">Enter</span>
+d <strike>  </strike>
+D (droid_dance)
+e  target="_blank"
+f Firefox
+F Facebook
+g <font color="#2668FF"># </font>
+G <font color="#238C00">/*  */</font>
+h ←
+H <hr width="95%" size="1" noshade style="border:2px dashed #cc0000;">
+i sudo aptitude install
+j ↓
+k ↑
+l →
+L linux
+m jonny70686@hotmail.com
+n 
+o &nbsp;
+p &copy;
+q 凍仁
+r <center> </center>
+R Cartoon
+s <font color="#ffdb00">★</font>
+S Server
+t  title=""
+T <h2 class="date-header">2010-0-0</h2>
+u Ubuntu
+v 
+w Windows
+x <code class="ref"> </code>
+y jonny@kimo.com
+Y jonny70686@yahoo.com.tw
+z <!--more-->
+Z <span class="fullpost"> </span>
+, &lt;
+. &gt;
+; ；
+[ 【
+] 】
+/ 
+` jonny@linux:~$ 
+1 <font color="#FFDB00">jonny</font><font color="#FF0000">@linux:</font><font color="#AD7FA8">~$</font> 
+2 chusiang.lai@gmail.com
+3 jonny@drx.tw
+4 資料來源：
+5 相關連結：
+6 延伸閱讀：
+7 &amp;
+8 k49311126@gcloud.csu.edu.tw
+9 
+0 
+- <(_ _)>
+= ≠
+\ 反斜
+' &quot;
+kp0 ─
+Kp0 ═
+kp. │
+Kp. ║
+kp1 └
+Kp1 ╚
+kp2 ┴
+Kp2 ╩
+kp3 ┘
+Kp3 ╝
+kp4 ├
+Kp4 ╠
+kp5 ┼
+Kp5 ╬
+kp6 ┤
+Kp6 ╣
+kp7 ┌
+Kp7 ╔
+kp8 ┬
+Kp8 ╦
+kp9 ┐
+Kp9 ╗
+
+# 凍仁筆記：最好別用，這陣子用了害自家的gcin猛當 Orz..
+# 底下的定義可能會造成 shift- 鍵不正常，需要者自行把 # 拿掉。
+#k_ins ─
+#k_del │
+#k_end └
+#k_down ┴
+#k_pgdn ┘
+#k_left ├
+#k_5 ┼
+#k_right ┤
+#k_home ┌
+#k_up ┬
+#k_pgup ┐
+
+# f1-f12 皆可用
+f1 ########
+f2 ========
+f3 --------
+f4 ~~~~~~~~
+f5 `TEXT <LINK>`_
+
+# ------------------------------------
+# Author : Chu-siang Lai
+# E-mail : jonny (at) drx.tw
+# Blog: http://note.drx.tw
+# ------------------------------------

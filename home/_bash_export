@@ -1,0 +1,41 @@
+#!/bin/bash
+
+# = custom export =
+
+# - language
+tty=`tty`
+t=`echo $tty|awk -F "/" '{print $3}'`
+if [ "$(tty)" = "/dev/tty1" ] || [ $t = pts ]; then
+ export LANGUAGE="en_US.UTF-8"
+ export LANG="en_US.UTF-8"
+ export LC_ALL="en_US.UTF-8"
+fi
+
+# - history add data.
+export HISTTIMEFORMAT='%F %T '
+export HISTSIZE=100000
+
+# - switch default editor.
+export EDITOR=vim
+
+# - manual setting git editor.
+export GIT_EDITOR=vim
+
+# - support rxvt on screen.
+export TERM=rxvt-unicode
+
+# - support 236color at tmux.
+#export TERM="xterm-256color"
+
+# - java.
+export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
+
+# - sort a-z and A-Z.
+export az="a b c d e f g h i j k l m n o p q r s t u v w x y z"
+export AZ="A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
+
+# ------------------------------------
+# Author : Chu-Siang Lai
+# E-mail : jonny (at) drx.tw
+# Blog: http://note.drx.tw
+# ------------------------------------

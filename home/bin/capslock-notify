@@ -1,0 +1,10 @@
+#!/bin/bash
+# show Caps-Lock status.
+
+if [ $( xset q | grep Caps | awk '{ print $4 }' ) = off ]; then
+	STATUS="'Lock keys' 'Caps-Lock has been disabled'";
+	echo "notify-send -t '2000' -i $HOME/.icons/lock-keys/capslock_off.png  $STATUS" | bash
+else
+	STATUS="'Lock keys' 'Caps-Lock has been enabled'";
+	echo "notify-send -t '2000' -i $HOME/.icons/lock-keys/capslock_on.png  $STATUS" | bash
+fi

@@ -1,0 +1,12 @@
+#!/usr/bin/env xdg-open
+
+[Desktop Entry]
+
+Version=1.0
+Type=Application
+Terminal=false
+Icon[zh_TW]=48x48forticlient.png
+Name[zh_TW]=FortiClient SSL VPN
+Exec=/opt/forticlientsslvpn/forticlientsslvpn
+Name=FortiClient SSL VPN
+Icon=48x48forticlient.png

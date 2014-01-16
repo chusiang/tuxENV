@@ -1,0 +1,9 @@
+# FileName:	config
+# Info:		disper configure.
+
+# enable all plugins in ~/.disper/hooks
+--plugins=user
+
+# cycle over extend
+--cycle-stages='-e -t left' --cycle
+
