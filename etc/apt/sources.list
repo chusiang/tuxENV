@@ -1,0 +1,77 @@
+# deb cdrom:[Debian GNU/Linux testing _Wheezy_ - Official Snapshot amd64 CD Binary-1 20130121-05:03]/ wheezy main
+
+deb http://opensource.nchc.org.tw/debian/ wheezy main contrib non-free
+deb-src http://opensource.nchc.org.tw/debian/ wheezy main contrib non-free
+
+deb http://opensource.nchc.org.tw/debian/ wheezy-updates main contrib non-free
+deb-src http://opensource.nchc.org.tw/debian/ wheezy-updates main contrib non-free
+
+deb http://security.debian.org/ wheezy/updates main
+deb-src http://security.debian.org/ wheezy/updates main
+
+# Experimental.
+deb http://ftp.tw.debian.org/debian experimental main
+deb-src http://ftp.tw.debian.org/debian experimental main
+
+# squeeze.
+deb http://opensource.nchc.org.tw/debian/ squeeze main contrib non-free
+deb-src http://opensource.nchc.org.tw/debian/ squeeze main contrib non-free
+
+# Jessie (testing).
+#deb http://opensource.nchc.org.tw/debian/ testing main contrib non-free
+
+# SID.
+#deb http://opensource.nchc.org.tw/debian/ sid main contrib non-free
+
+# Multimedia.
+# - master
+#deb http://www.deb-multimedia.org wheezy main non-free
+#deb-src http://www.deb-multimedia.org wheezy main non-free
+
+# - mirrors of Taiwan.
+deb ftp://ftp.ubuntu-tw.org/mirror/debian-multimedia wheezy main non-free
+deb-src ftp://ftp.ubuntu-tw.org/mirror/debian-multimedia wheezy main non-free
+#deb http://ftp.tw.debian.org/debian-multimedia/ wheezy main
+#deb-src http://ftp.tw.debian.org/debian-multimedia/ wheezy main
+
+# ---- third ----
+
+# Mate Desktop Environment 
+# - master 
+#deb http://repo.mate-desktop.org/debian wheezy main
+ 
+# - mirrors
+#deb http://packages.mate-desktop.org/repo/debian wheezy main
+#deb http://mirror1.mate-desktop.org/repo/debian wheezy main
+
+# - mirrors of Taiwan.
+deb ftp://ftp.ubuntu-tw.org/mirror/mate-desktop/debian wheezy main
+deb-src ftp://ftp.ubuntu-tw.org/mirror/mate-desktop/debian wheezy main
+
+# Iceweasel.
+#deb http://mozilla.debian.net/ wheezy-backports iceweasel-esr
+deb http://mozilla.debian.net/ wheezy-backports iceweasel-release
+deb-src http://mozilla.debian.net/ wheezy-backports iceweasel-release
+
+
+# hime
+deb http://debian.luna.com.tw/wheezy ./
+deb-src http://debian.luna.com.tw/wheezy ./
+
+# Awoken Themes.
+deb http://ppa.launchpad.net/alecive/antigone/ubuntu precise main 
+deb-src http://ppa.launchpad.net/alecive/antigone/ubuntu precise main 
+
+# TLP
+deb http://ppa.launchpad.net/linrunner/tlp/ubuntu lucid main 
+deb-src http://ppa.launchpad.net/linrunner/tlp/ubuntu lucid main 
+
+# Fingerprint GUI 
+#deb http://ppa.launchpad.net/fingerprint/fingerprint-gui/ubuntu lucid main 
+#deb-src http://ppa.launchpad.net/fingerprint/fingerprint-gui/ubuntu lucid main 
+
+# MariaDB 5.5 repository list - created 2013-09-03 17:20 UTC
+# http://mariadb.org/mariadb/repositories/
+#deb http://ftp.ubuntu-tw.org/mirror/mariadb/repo/5.5/debian wheezy main
+#deb-src http://ftp.ubuntu-tw.org/mirror/mariadb/repo/5.5/debian wheezy main
+

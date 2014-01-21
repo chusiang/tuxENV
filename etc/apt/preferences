@@ -1,0 +1,44 @@
+#package: *
+#Pin: release a=testing
+#Pin-Priority: 500
+
+# - Compiz
+package: compiz
+Pin: release a=stable
+Pin-Priority: 800
+
+package: compiz-core
+Pin: release a=stable
+Pin-Priority: 800
+
+package: compiz-fusion-plugins-extra
+Pin: release a=stable
+Pin-Priority: 780
+
+package: compiz-fusion-plugins-main
+Pin: release a=stable
+Pin-Priority: 790
+
+package: compiz-gnome
+Pin: release a=stable
+Pin-Priority: 791
+
+package: compiz-gtk
+Pin: release a=stable
+Pin-Priority: 800
+
+package: compiz-plugins
+Pin: release a=stable
+Pin-Priority: 800
+
+package: compizconfig-settings-manager
+Pin: release a=stable
+Pin-Priority: 800
+
+package: metacity-common
+Pin: release a=stable
+Pin-Priority: 700
+
+package: iceweasel
+Pin: release a=wheezy-backports
+Pin-Priority: 1000
