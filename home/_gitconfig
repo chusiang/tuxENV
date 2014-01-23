@@ -24,6 +24,8 @@
 	br = branch
 	re = remote
 	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lo = log --color --pretty=format:'%Cred%h%Creset %s' --abbrev-commit 
+	#ls = log --color --pretty=oneline --pretty=format:'%Cred' --abbrev-commit 
 	me = merge --no-ff
 	mg = merge --no-ff
 	nfmerge = merge --no-ff
