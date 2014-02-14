@@ -79,6 +79,12 @@ case $cmd in
 		fouce chromium
 		;;
 
+	"google-chrome")
+		# only google-chrome, not chrome on lucid, so link it by myself.
+		# $ ln -s /usr/bin/google-chrome ~/bin/chrome
+		fouce google-chrome
+		;;
+
 	"lxterminal")
 		fouce lxterminal
 		;;
