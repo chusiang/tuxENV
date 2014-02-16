@@ -1,0 +1,7 @@
+#!/bin/bash
+# name: mouse-click-screen
+{ eval $(xdotool getmouselocation --shell)  # save current mouse position
+  sleep .15               # It needs a delay (?!).. Your Mileage May Vary
+  xdotool mousemove --sync ${1:-10} ${2:-10} click 1
+  xdotool mousemove --sync $X $Y           # restore saved mouse position
+} 2>/dev/null
