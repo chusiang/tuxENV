@@ -82,6 +82,7 @@ map -modes=n <ESC>b -builtin <C-S-o>
 
 " - Enabled 'Inspect' of Web Developer plugin..
 map -modes=n <A-d> <C-S-i>
+map -modes=n <A-c> <C-S-c>
 
 " - Trigger 'Group Tabs'.
 map -modes=n <A-e> <C-S-e>
