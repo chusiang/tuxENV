@@ -40,6 +40,8 @@ alias sm='sm --background=#000 --foreground=#ff0000'
 alias rxvt='rxvt-unicode'
 alias irc='rxvt -name IRC -e irss'
 alias tmux="TERM=screen-256color-bce tmux"
+alias tmux0="TERM=screen-256color-bce tmux a -t 0"
+alias tmux1="TERM=screen-256color-bce tmux a -t 1"
 alias chromium='chromium --disk-cache-dir=/dev/shm/Cache/Chromium'
 alias pdf='atril'
 
