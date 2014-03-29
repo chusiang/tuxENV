@@ -19,9 +19,11 @@ deb-src http://opensource.nchc.org.tw/debian/ squeeze main contrib non-free
 
 # Jessie (testing).
 #deb http://opensource.nchc.org.tw/debian/ testing main contrib non-free
+#deb-src http://opensource.nchc.org.tw/debian/ testing main contrib non-free
 
 # SID.
 #deb http://opensource.nchc.org.tw/debian/ sid main contrib non-free
+#deb-src http://opensource.nchc.org.tw/debian/ sid main contrib non-free
 
 # Multimedia.
 # - master
