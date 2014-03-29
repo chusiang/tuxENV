@@ -1,0 +1,34 @@
+---ITEM---
+f:%T - %U
+l:Plain Text
+a:P
+---ITEM---
+f:<a href="%U">%T</a>
+l:HTML Link
+a:H
+---ITEM---
+f:<a href="%U" target="_blank">%T</a>
+l:HTML (blank)
+a:T
+---ITEM---
+s:separator
+---ITEM---
+f:`%T <%U>`_
+l:reStructuredText
+a:R
+---ITEM---
+f:[%T](%U)
+l:Markdown
+a:M
+---ITEM---
+f:%U (%T)
+l:Plurk
+a:L
+---ITEM---
+f:[%U %T]
+l:Wikipedia
+a:W
+---ITEM---
+f:[url=%U]%T[/url]
+l:BB Code
+a:B
