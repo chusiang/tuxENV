@@ -9,13 +9,14 @@ export LS_OPTIONS='--color=auto'
 alias cd.='cd ..'
 alias cd..='cd ../..'
 alias cd...='cd ../../..'
+alias cd....='cd ../../../..'
 alias rm='rm -i'
 alias mv='mv -i'
 alias cp='cp -i'
 
 alias ls='ls $LS_OPTIONS'
 alias la='ls -A'
-alias ll='ls -l'
+alias ll='ls -lh'
 alias lla='ls -Al'
 alias lh='ls -lh'
 alias lt='tree'
@@ -46,10 +47,7 @@ alias chromium='chromium --disk-cache-dir=/dev/shm/Cache/Chromium'
 alias pdf='atril'
 
 alias gsh='ssh -t guest-xp ssh'
-
-
-# == note ==
-alias vinote='vi /home/jonny/Dropbox/Public/www/note.rst'
+alias msh='mosh'
 
 # -----------------------------------
 # Author : Chu-Siang Lai
