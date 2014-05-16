@@ -1,0 +1,42 @@
+# = rtorrent 設定檔 =
+
+# 最小/最大連接數
+min_peers = 40
+max_peers = 200
+
+# 最大上傳數
+max_uploads = 2
+
+# 上傳下載速度限制，0=無限制(單位 KiB)
+download_rate = 150
+upload_rate = 8
+
+# port 範圍
+port_range = 19000-19000
+
+# 下載檔名編碼
+encoding_list = UTF-8
+
+# 下載檔案存放目錄
+directory = ~/download/
+
+# 快取存放目錄
+session = ~/dev/shm/
+
+# rTorrent 會掃描此目錄的torrent並自動加入排程
+schedule = watch_directory,5,5,load_start=~/download/*.torrent
+
+# 自動搬移已下載完成的檔案
+on_finished = move_complete,"execute=mv,$d.get_base_path=,/mnt/disk_c/BT_finished/;d.set_directory=/mnt/disk_c/BT_finished/"
+
+# DHT on/off
+dht = on
+
+# DHT port (預設為 6881)
+dht_port = 19000
+
+# peer exchange 啟用
+peer_exchange = yes
+
+#hash 檢查 (單位 milliseconds)
+hash_interval = 150
