@@ -34,6 +34,15 @@ export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
 export az="a b c d e f g h i j k l m n o p q r s t u v w x y z"
 export AZ="A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
 
+# cd . and $HOME.
+export CDPATH=.:~
+
+# limit Ctrl + D time.
+export iGNOREEOF=2
+
+# - time out with 60 min.
+export TMOUT=600
+
 # ------------------------------------
 # Author : Chu-Siang Lai
 # E-mail : jonny (at) drx.tw
