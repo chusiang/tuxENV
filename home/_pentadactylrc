@@ -117,7 +117,7 @@ map -modes=n <F9> :set<Space>guioptions-=Bs<Space><Return>
 map -modes=n ss o  javascript:(function(){SP_HOST='//springpad.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=SP_HOST+'/public/clipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){var%20u=SP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document&&document.title||'');try{window.open(u,'sp_popout','width=630,height=600');}catch(e){window.location=u;}}})(); <Return>
 
 "  - Diggo.
-map -modes=n sd o javascript:javascript:(function(){DIIGO_R_TEST=false;DIIGO_R_SCRIPT=document.createElement('SCRIPT');DIIGO_R_SCRIPT.type='text/javascript';DIIGO_R_SCRIPT.src='http://www.diigo.com/javascripts/readlater.js';document.getElementsByTagName('body')[0].appendChild(DIIGO_R_SCRIPT)})(); <Return>
+"map -modes=n sd o javascript:javascript:(function(){DIIGO_R_TEST=false;DIIGO_R_SCRIPT=document.createElement('SCRIPT');DIIGO_R_SCRIPT.type='text/javascript';DIIGO_R_SCRIPT.src='http://www.diigo.com/javascripts/readlater.js';document.getElementsByTagName('body')[0].appendChild(DIIGO_R_SCRIPT)})(); <Return>
 
 "  - Evernote.
 map -modes=n se o javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title);}})(); <Return>
@@ -143,7 +143,7 @@ map -modes=n <F1> -js content.getSelection().toString()!=""?dactyl.execute(":tab
 " - Quick open link.
 
 "  - Diigo.
-map -modes=n <ESC>g t http://www.diigo.com/user/chusiang <Return>
+"map -modes=n <ESC>g t http://www.diigo.com/user/chusiang <Return>
 
 "  - history
 map -modes=n <ESC>h :hs! 
