@@ -121,6 +121,11 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# enable the autojump.
+if [ -f /usr/share/autojump/autojump.bash ]; then
+    . /usr/share/autojump/autojump.bash
+fi
+
 # == Color Man Pages ==
 
 # - with less.
