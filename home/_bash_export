@@ -41,7 +41,7 @@ export CDPATH=.:~
 export iGNOREEOF=2
 
 # - time out with 60 min.
-export TMOUT=600
+#export TMOUT=600
 
 # ------------------------------------
 # Author : Chu-Siang Lai
