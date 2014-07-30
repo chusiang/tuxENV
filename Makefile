@@ -19,6 +19,7 @@ FILE_BASH_PROFILE=${HOME}/.bash_profile
 FILE_SCREENRC=${HOME}/.screenrc
 FILE_TMUXRC=${HOME}/.tmux.conf
 FILE_EDIT_MODE=${HOME}/.inputrc
+FILE_GITCONFIG=${HOME}/.gitconfig
 
 # - Desktop
 FILE_AWOKENRC=${HOME}/.AwOkenrc
@@ -50,6 +51,7 @@ backup:
 	mv ${FILE_SCREENRC} ${DIR_BAK}/
 	mv ${FILE_TMUXRC} ${DIR_BAK}/
 	mv ${FILE_EDIT_MODE} ${DIR_BAK}/
+	mv ${FILE_GITCONFIG} ${DIR_BAK}/
 ifeq ($(TYPE), desktop)
 	mv ${FILE_AWOKENRC} ${DIR_BAK}/
 	mv ${FILE_EVILWMRC} ${DIR_BAK}/
@@ -70,6 +72,7 @@ install:
 	cat home/_screenrc > ${FILE_SCREENRC}
 	cat home/_tmux.conf > ${FILE_TMUXRC}
 	cat home/_inputrc > ${FILE_EDIT_MODE}
+	cat home/_gitconfig > ${FILE_GITCONFIG}
 	cp -a home/bin/ ${DIR_BIN} 
 ifeq ($(TYPE), desktop)
 	@echo '==> Install with desktop.'
@@ -97,6 +100,7 @@ update:
 	rsync -aqz home/_screenrc ${FILE_SCREENRC}
 	rsync -aqz home/_tmux.conf ${FILE_TMUXRC}
 	rsync -aqz home/_inputrc ${FILE_EDIT_MODE}
+	rsync -aqz home/_gitconfig ${FILE_GITCONFIG}
 	rsync -aqz home/bin/ ${DIR_BIN} 
 ifeq ($(TYPE), desktop)
 	@echo '==> Updating with desktop.'
