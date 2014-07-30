@@ -11,8 +11,8 @@
 [diff]
     external = git_diff_wrapper
 
-[core]
-    pager = 
+[pager]
+    diff = 
 
 [alias]
 	co = checkout
