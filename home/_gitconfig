@@ -3,10 +3,11 @@
 	email = chusiang.lai@gmail.com
 
 [color]
-	diff = auto
-	status = auto
 	branch = auto
+	diff = auto
 	log = auto
+	status = auto
+	ui = auto
 
 [diff]
     external = git_diff_wrapper
