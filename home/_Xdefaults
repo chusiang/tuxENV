@@ -17,14 +17,14 @@ URxvt.iconFile: /home/jonny/.icons/128x128terminal.png
 # your terminal is sluggish. Use only ONE of the Xft pairs below:
 #
 # Monaco and LiHei Pro (Chinese).
-URxvt.font:			xft:Monaco:pixelsize=20:autohint=true, xft:LiHei Pro:pixelsize=20:autohint=true
-URxvt.boldFont: 	xft:Monaco:bold:pixelsize=20:autohint=true, xft:LiHei Pro:pixelsize=20:autohint=true
-URxvt.italicFont:	xft:Monaco:italic:pixelsize=20:autohint=true, xft:LiHei Pro:italic:pixelsize=20:autohint=true
+URxvt.font:			xft:Monaco:pixelsize=18:autohint=true, xft:LiHei Pro:pixelsize=18:autohint=true
+URxvt.boldFont: 	xft:Monaco:bold:pixelsize=18:autohint=true, xft:LiHei Pro:pixelsize=18:autohint=true
+URxvt.italicFont:	xft:Monaco:italic:pixelsize=18:autohint=true, xft:LiHei Pro:italic:pixelsize=18:autohint=true
 
 #
 # - Custom default window size.
 #
-URxvt.geometry: 80x24
+URxvt.geometry: 80x36
 
 # Color
 # ========
