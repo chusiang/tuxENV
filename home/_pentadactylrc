@@ -45,15 +45,17 @@ map -modes=n,v <C-s> -builtin <C-c>
 map -modes=i <C-x> -builtin <C-v><C-x>
 map -modes=i <C-z> -builtin <C-v><C-z>
 map -modes=i <C-y> -builtin <C-v><C-y>
+"map -modes=i jj -builtin <ESC>
 
 " - Close Tab.
 "map -modes=n d :quit<cr>
 
-" - Cursor Move.
+" - support HHKB layout.
 map -modes=i,c <C-h> <left>
 map -modes=i,c <C-j> <down>
 map -modes=i,c <C-k> <up>
 map -modes=i,c <C-l> <right>
+map -modes=i,n,c <S-ESC> ~
 
 "  - for mapping ctrl + h, j, k, l with /usr/share/X11/xkb/symbols/us [1].
 map -modes=i,c <C-down> <down>
