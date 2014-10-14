@@ -1,0 +1,15 @@
+[Desktop Entry]
+
+Version=1.0
+Encoding=UTF-8
+Name=Vega
+Comment=Vega is a platform for testing the security of web applications.
+TryExec=vega
+Exec=Vega
+Terminal=false
+X-MultipleArgs=false
+Icon=/opt/vega/Vega.png
+Type=Application
+Categories=GNOME;GTK;Utility;
+StartupNotify=true
+
