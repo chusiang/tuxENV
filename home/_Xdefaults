@@ -17,9 +17,9 @@ URxvt.iconFile: /home/jonny/.icons/128x128terminal.png
 # your terminal is sluggish. Use only ONE of the Xft pairs below:
 #
 # Monaco and LiHei Pro (Chinese).
-URxvt.font:			xft:Monaco:pixelsize=18:autohint=true, xft:LiHei Pro:pixelsize=18:autohint=true
-URxvt.boldFont: 	xft:Monaco:bold:pixelsize=18:autohint=true, xft:LiHei Pro:pixelsize=18:autohint=true
-URxvt.italicFont:	xft:Monaco:italic:pixelsize=18:autohint=true, xft:LiHei Pro:italic:pixelsize=18:autohint=true
+URxvt.font:			xft:Monaco:pixelsize=20:autohint=true, xft:LiHei Pro:pixelsize=20:autohint=true
+URxvt.boldFont: 	xft:Monaco:bold:pixelsize=20:autohint=true, xft:LiHei Pro:pixelsize=20:autohint=true
+URxvt.italicFont:	xft:Monaco:italic:pixelsize=20:autohint=true, xft:LiHei Pro:italic:pixelsize=20:autohint=true
 
 #
 # - Custom default window size.
@@ -153,9 +153,10 @@ IRC.mapAlert:		true
 #
 # - Clickable URLs in Firefox [4]
 #  
-URxvt.perl-ext-common : default,matcher
-URxvt.urlLauncher     : iceweasel
-URxvt.matcher.button  : 1
+URxvt.perl-ext-common: default,matcher
+URxvt.urlLauncher:     x-www-browser
+#URxvt.urlLauncher: iceweasel
+URxvt.matcher.button:  1
 # Since rxvt-unicode 9.14, it's also possible to use matcher to open and list recent (currently limited to 10) URLs via keyboard: 
 #URxvt.keysym.C-Delete:  perl:matcher:last
 #URxvt.keysym.M-Delete:  perl:matcher:list
@@ -164,6 +165,31 @@ URxvt.matcher.button  : 1
 #
 URxvt.perl-ext-common: fullscreen
 URxvt.keysym.F11:  perl:fullscreen:switch
+
+#
+# - urxvt-perls
+#
+URxvt.perl-lib:        /home/jonny/.urxvt/ext/urxvt-perls/
+URxvt.perl-ext-common: default,selection-autotransform,matcher
+
+#  - keyboard-select
+URxvt.perl-ext-common: keyboard-select
+URxvt.keysym.M-Escape: perl:keyboard-select:activate
+URxvt.keysym.M-s: perl:keyboard-select:search
+
+# -- url-select
+#URxvt.perl-ext-common: url-select
+#URxvt.keysym.M-u: perl:url-select:select_next
+#URxvt.url-select.underline
+
+#  - clipboard
+#URxvt.perl-ext-common: clipboard
+#URxvt.keysym.M-c:   perl:clipboard:copy
+#URxvt.keysym.M-p:   perl:clipboard:paste
+#URxvt.clipboard.copycmd:  xclip -i -selection clipboard
+#URxvt.clipboard.pastecmd: xclip -o -selection clipboard
+
+
 
 # Reference
 # ========
