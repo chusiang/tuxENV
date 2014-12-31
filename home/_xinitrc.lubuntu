@@ -1,0 +1,11 @@
+# ============================================================
+#  Author: 凍仁翔 / chusiang.lai (at) gmail.com
+#  Blog: http://note.drx.tw
+#  Filename: _xinitrc.lubuntu
+#  Modified: 2014-12-31 09:45
+#  Description: Run Lubuntu config with startx.
+#  Reference: 
+#   1. https://bugs.launchpad.net/ubuntu/+source/lubuntu-default-settings/+bug/1241958
+# =========================================================== 
+
+exec /usr/bin/lxsession -s Lubuntu -e LXDE
