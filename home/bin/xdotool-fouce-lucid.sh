@@ -1,9 +1,16 @@
-#!/bin/bash
-# Filename:	xdotool-fouce.sh
-# Info:		launch and switch windows fouce, first you need to install the 'xdotool' package.
-# Example:	$ ./xdotool-fouce.sh gvim
+# ============================================================
+#  Author: 凍仁翔 / chusiang.lai (at) gmail.com
+#  Blog: http://note.drx.tw
+#  Filename: xdotool-fouce-lucid.sh
+#  Modified: 2014-12-31 21:45
+#  Description: launch and switch windows fouce, first you need to install the 'xdotool' package for Ubuntu 10.04.
+#    Ex: $ ./xdotool-fouce.sh firefox
+#  Reference: 
+# =========================================================== 
 
-# - Global
+#!/bin/bash
+
+# Global
 fouce () {
 	WIDs=$( xdotool search "$1" 2> /dev/null )
 	declare -i WIDn=$( echo "$WIDs" | wc -l )
@@ -18,7 +25,7 @@ fouce () {
 	fi
 }
 
-# - only for nautilus on Ubuntu 10.04
+# only for nautilus on Ubuntu 10.04
 fouce-nautilus () {
 	WIDs=$( xdotool search "$1" 2> /dev/null )
 	declare -i WIDn=$( echo "$WIDs" | wc -l )
@@ -33,13 +40,13 @@ fouce-nautilus () {
 	fi
 }
 
-# = Main =
+# Main
 if [ $0 != $BASH_SOURCE ]; then
 	return
 fi
 cmd=$1 ; shift
 
-# - white list.
+# white list.
 case $cmd in
 
 	"gvim")
@@ -77,10 +84,3 @@ case $cmd in
 		;;
 
 esac
-
-# ------------------------------------
-# Author : Chu-siang Lai
-# E-mail : jonny (at) drx.tw
-# Blog: http://note.drx.tw
-# ------------------------------------
-

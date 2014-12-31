@@ -1,5 +1,13 @@
+# ============================================================
+#  Author: 凍仁翔 / chusiang.lai (at) gmail.com
+#  Blog: http://note.drx.tw
+#  Filename: powersave.sh
+#  Modified: 2014-12-31 21:21
+#  Description: PowerTop conifg for ThinkPad T410 on Debian 7. 
+#  Reference: 
+# =========================================================== 
+
 #!/bin/bash
-# PowerTop conifg for ThinkPad T410 on Debian Wheezy.
 
 # Wireless Power Saving for interface wlan0
 iw dev wlan0 set power_save off

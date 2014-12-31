@@ -1,9 +1,18 @@
-#!/bin/bash
-# Filename:	xdotool-fouce.sh
-# Info:		launch and switch windows fouce, first you need to install the 'xdotool' package.
-# Example:	$ ./xdotool-fouce.sh gvim
+# ============================================================
+#  Author: 凍仁翔 / chusiang.lai (at) gmail.com
+#  Blog: http://note.drx.tw
+#  Filename: xdotool-fouce-wheezy.sh
+#  Modified: 2014-12-31 21:47
+#  Description: launch and switch windows fouce, first you need to install the 'xdotool' package for Debian 7.
+#    Ex: $ ./xdotool-fouce.sh iceweasel
+#  Description: 
+#  Reference: 
+#   1. 
+# =========================================================== 
 
-# - Global
+#!/bin/bash
+
+# Global
 fouce () {
 	WIDs=$( xdotool search "$1" 2> /dev/null )
 	declare -i WIDn=$( echo "$WIDs" | wc -l )
@@ -18,7 +27,7 @@ fouce () {
 	fi
 }
 
-# - only for nautilus on Ubuntu 10.04
+# only for nautilus on Ubuntu 10.04
 fouce-nautilus () {
 	WIDs=$( xdotool search "$1" 2> /dev/null )
 	declare -i WIDn=$( echo "$WIDs" | wc -l )
@@ -98,10 +107,3 @@ case $cmd in
 		;;
 
 esac
-
-# ------------------------------------
-# Author : Chu-Siang Lai
-# E-mail : jonny (at) drx.tw
-# Blog: http://note.drx.tw
-# ------------------------------------
-

@@ -1,6 +1,15 @@
+# ============================================================
+#  Author: 凍仁翔 / chusiang.lai (at) gmail.com
+#  Blog: http://note.drx.tw
+#  Filename: marble-init.sh
+#  Modified: 2014-12-31 20:43
+#  Description: Enable scroll and middle click at Marble TrackBall.
+#  Reference: 
+#   1. 凍仁的筆記: Logitech Marble Trackball on Ubuntu 10.04+
+#     - http://note.drx.tw/2010/06/logitech-marble-trackball-on-ubuntu.html
+# =========================================================== 
+
 #!/bin/bash
-# Filename: marble-init.sh
-# Info:		Enable scroll and middle click at Marble TrackBall.
 
 DEV_MARBLE=$( lsusb | grep -i "Logitech, Inc. Marble Mouse" | wc -l )
 
@@ -25,11 +34,6 @@ else
 
 fi
 
+# We can send message to system notification with libnotify-bin.
 echo "notify-send -t 2000 -i mouse $STATUS" | bash
-
-# ------------------------------------
-# Author : Chu-Siang, Lai
-# E-mail : jonny (at) drx.tw
-# Blog: http://note.drx.tw
-# ------------------------------------
 

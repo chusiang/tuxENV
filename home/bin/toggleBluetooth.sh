@@ -1,5 +1,13 @@
+# ============================================================
+#  Author: 凍仁翔 / chusiang.lai (at) gmail.com
+#  Blog: http://note.drx.tw
+#  Filename: toggleBluetooth.sh
+#  Modified: 2014-12-31 20:39
+#  Description: switch Bluetooth status.
+#  Reference: 
+# =========================================================== 
+
 #!/bin/bash
-# switch Bluetooth status.
 
 # 若未開啟藍牙硬體開關，則顯示未 Hard has been disabled.
 if [ $( sudo rfkill list | head -n 3 | tail -n 1 | awk '{ print $3 }' ) = yes ]; then

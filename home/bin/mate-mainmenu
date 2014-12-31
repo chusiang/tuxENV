@@ -1,5 +1,16 @@
+# ============================================================
+#  Author: 凍仁翔 / chusiang.lai (at) gmail.com
+#  Blog: http://note.drx.tw
+#  Filename: mate-mainmenu
+#  Modified: 2014-12-31 20:55
+#  Description: 
+#  Reference: 
+#   1. Linux-Mint Maya Mate loses Alt-F1 menu and Alt-F2 run-dialog with Compiz | Super User
+#     - http://superuser.com/a/478307
+# =========================================================== 
+
 #!/bin/bash
-# name: mouse-click-screen
+
 { eval $(xdotool getmouselocation --shell)  # save current mouse position
   sleep .15               # It needs a delay (?!).. Your Mileage May Vary
   xdotool mousemove --sync ${1:-10} ${2:-10} click 1

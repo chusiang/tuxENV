@@ -1,10 +1,20 @@
+# ============================================================
+#  Author: 凍仁翔 / chusiang.lai (at) gmail.com
+#  Blog: http://note.drx.tw
+#  Filename: numlock-notify
+#  Modified: 2014-12-31 21:25
+#  Description: show Num-Lock status.
+#  Reference: 
+#   1. 凍仁的筆記: 【Scripts】CapsLock Notification on Debian
+#     - http://note.drx.tw/2011/03/scriptscapslock-notification-on-debian.html
+# =========================================================== 
+
 #!/bin/bash
-# show Num-Lock status.
 
 if [ $( xset q | grep Num | awk '{ print $8 }' ) = off ]; then
-	STATUS="'Lock keys' 'Num-Lock has been disabled'";
-        echo "notify-send -t 2000 -i $HOME/.icons/lock-keys/numlock_off.png  $STATUS" | bash		
+  STATUS="'Lock keys' 'Num-Lock has been disabled'";
+  echo "notify-send -t 2000 -i $HOME/.icons/lock-keys/numlock_off.png  $STATUS" | bash		
 else
-	STATUS="'Lock keys' 'Num-Lock has been enabled'";
-        echo "notify-send -t 2000 -i $HOME/.icons/lock-keys/numlock_on.png  $STATUS" | bash		
+  STATUS="'Lock keys' 'Num-Lock has been enabled'";
+  echo "notify-send -t 2000 -i $HOME/.icons/lock-keys/numlock_on.png  $STATUS" | bash		
 fi

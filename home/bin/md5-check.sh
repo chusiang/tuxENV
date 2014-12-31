@@ -1,6 +1,14 @@
+# ============================================================
+#  Author: 凍仁翔 / chusiang.lai (at) gmail.com
+#  Blog: http://note.drx.tw
+#  Filename: md5-check.sh
+#  Modified: 2014-12-31 20:58
+#  Description: use md5sum check fils with list.txt.
+#  Reference: 
+# =========================================================== 
+
 #!/bin/bash
-# Filename: md5-check.sh
-# Info:		use md5sum check fils with list.txt
+# Info:		
 
 for X in $(cat list.txt); do
 

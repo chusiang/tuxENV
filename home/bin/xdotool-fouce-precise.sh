@@ -1,7 +1,14 @@
+# ============================================================
+#  Author: 凍仁翔 / chusiang.lai (at) gmail.com
+#  Blog: http://note.drx.tw
+#  Filename: xdotool-fouce-precise.sh
+#  Modified: 2014-12-31 21:46
+#  Description: launch and switch windows fouce, first you need to install the 'xdotool' package for Ubuntu 12.04.
+#    Ex: $ ./xdotool-fouce.sh firefox
+#  Reference: 
+# =========================================================== 
+
 #!/bin/bash
-# Filename:	xdotool-fouce.sh
-# Info:		launch and switch windows fouce, first you need to install the 'xdotool' package.
-# Example:	$ ./xdotool-fouce.sh gvim
 
 fouce () {
 	WIDs=$( xdotool search "$1" 2> /dev/null )
@@ -17,7 +24,7 @@ fouce () {
 	fi
 }
 
-# = Main =
+# Main
 if [ $0 != $BASH_SOURCE ]; then
 	return
 fi
@@ -55,10 +62,3 @@ case $cmd in
 		;;
 
 esac
-
-# ------------------------------------
-# Author : Chu-siang Lai
-# E-mail : jonny (at) drx.tw
-# Blog: http://note.drx.tw
-# ------------------------------------
-

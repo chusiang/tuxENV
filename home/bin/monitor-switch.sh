@@ -1,21 +1,30 @@
-#!/bin/bash
-# FileName:	monitor-switch.sh
-# Info: 	Switch single/secondary/clone/extend display with disper on Multiple Monitor.
-# Note:		test 'Fn + F7' hotkey.
+# ============================================================
+#  Author: 凍仁翔 / chusiang.lai (at) gmail.com
+#  Blog: http://note.drx.tw
+#  Filename: monitor-switch.sh
+#  Modified: 2014-12-31 21:11
+#  Description:
+#      Switching single/secondary/clone/extend mode display with
+#    'disper' on Multi-monitor, and I like to switch with Fn + F7.
+#  Reference: 
+#   1. 
+# =========================================================== 
 
-# = Initialization =
+#!/bin/bash
+
+# - Initialization
 LINES=`disper -l | wc -l`
 DISPLAY_COUNT=$((LINES / 2))
 PRIMARY=$(disper -l | sed -n '1p' | awk '{ print $2 }' | sed 's/://')
 
-# = Main =
+# - Main
 
-# - only local display.
+# Only one display.
 if [ $DISPLAY_COUNT -eq "1" ]; then
 	disper -d $PRIMARY -s
 	echo "DISPLAY_STATUS = single" > /dev/shm/disper-status
 
-# - over two displays.
+# Over one display.
 else
 
 	# disper-status exist
@@ -47,8 +56,3 @@ else
 
 fi
 
-# -----------------------------------
-#  Author : Chu-siang Lai
-#  E-mail : jonny (at) drx.tw
-#  Blog : http://note.drx.tw
-# -----------------------------------

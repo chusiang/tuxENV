@@ -1,5 +1,15 @@
+# ============================================================
+#  Author: 凍仁翔 / chusiang.lai (at) gmail.com
+#  Blog: http://note.drx.tw
+#  Filename: wheel-scrolling.sh
+#  Modified: 2014-12-31 21:39
+#  Description: 
+#  Reference: 
+#   1. 凍仁的筆記: Logitech Marble Trackball on Ubuntu 10.04+
+#     - http://note.drx.tw/2010/06/logitech-marble-trackball-on-ubuntu.html
+# =========================================================== 
+
 #!/bin/bash
-#Filename: wheel-scrolling.sh
 
 DEV_WHEEL=$(lsusb | grep "Logitech, Inc. TrackMan Wheel" | wc -l)
 

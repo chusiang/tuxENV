@@ -1,6 +1,14 @@
+# ============================================================
+#  Author: 凍仁翔 / chusiang.lai (at) gmail.com
+#  Blog: http://note.drx.tw
+#  Filename: md5-make.sh
+#  Modified: 2014-12-31 20:59
+#  Description: make md5sum fils with list.txt.
+#  Reference: 
+#   1. 
+# =========================================================== 
+
 #!/bin/bash
-# Filename: md5-make.sh
-# Info:		make md5sum fils with list.txt
 
 for X in $(cat list.txt); do
 
