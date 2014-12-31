@@ -1,10 +1,20 @@
+" ============================================================
+"  Author: 凍仁翔 / chusiang.lai (at) gmail.com
+"  Blog: http://note.drx.tw
+"  Filename: _pentadactylrc
+"  Modified: 2014-12-31 09:56
+"  Description: 
+"  Reference: 
+"   1. macros - Mapping Super+hjkl to arrow keys under X - http://superuser.com/questions/96299/mapping-superhjkl-to-arrow-keys-under-x
+" =========================================================== 
+
 "1.0b6 (created: 2011/03/09 09:25:18)
 
 loadplugins '\.(js|penta)$'
 group user
 
-" = Autocommands =
-
+" # Autocommands
+"
 autocmd LocationChange disp\.cc/ -js modes.set(modes.PASS_THROUGH)
 autocmd LocationChange (mail|www)\.google\.com/(calendar|mail|reader)/ -js modes.set(modes.PASS_THROUGH)
 autocmd LocationChange docs\.google\.com/(document|present|spreadsheet) -js modes.set(modes.PASS_THROUGH)
@@ -12,33 +22,33 @@ autocmd LocationChange mail\.yahoo\.com/ -js modes.set(modes.PASS_THROUGH)
 autocmd LocationChange github\.com/ -js modes.set(modes.PASS_THROUGH)
 autocmd LocationChange bitbucket\.org/ -js modes.set(modes.PASS_THROUGH)
 
-" = GUI =
-
-" - Default show GUI elements of 'Bookmarks Toobar', 'Tab number over image' and 'Status bar'.
+" # GUI
+"
+"  - Default show GUI elements of 'Bookmarks Toobar', 'Tab number over image' and 'Status bar'.
 set guioptions=BNs
 
-" = Options =
-
-" - Maximum number of items to display at once in a listing.
+" # Options
+"
+"  - Maximum number of items to display at once in a listing.
 set maxitems=6
-
-" - Items which are completed at the :open prompts. 
+"
+"  - Items which are completed at the :open prompts. 
 set complete=b
-
-" - Highlight previous find pattern matches.
+"
+"  - Highlight previous find pattern matches.
 set hlfind
-
-" - The keys used to label and select hints. 
+"
+"  - The keys used to label and select hints. 
 set hintkeys=asdfghjkl;
 
-" = Styling =
-
-" - Highlight {group} with [css]. [css] is one or more semicolon-separated CSS declarations (E.g. color: blue; background-color: red).)]]}
+" # Styling
+"
+"  - Highlight {group} with [css]. [css] is one or more semicolon-separated CSS declarations (E.g. color: blue; background-color: red).)]]}
 hi Hint font:bold 16px monospace !important; margin:-.2ex; padding: 0 0 0 1px; outline:1px solid rgba(0, 0, 0, .5); background:rgba(255, 248, 231, .8); color:black; text-transform:uppercase;
 highlight StatusLineNormal color: #999999 ; background: #090909 !important; font-size: 12pt; font-family: monospace; font-weight: 600; padding: 0px 3px;
 
-" = Keymap =
-
+" # Keymap
+"
 map -modes=n,v <C-a> <C-v><C-a>
 map -modes=n,v <C-c> -builtin <C-v><C-c>
 map -modes=n,v <C-s> -builtin <C-c>
@@ -46,53 +56,53 @@ map -modes=i <C-x> -builtin <C-v><C-x>
 map -modes=i <C-z> -builtin <C-v><C-z>
 map -modes=i <C-y> -builtin <C-v><C-y>
 "map -modes=i jj -builtin <ESC>
-
-" - Close Tab.
+"
+"  - Close Tab.
 "map -modes=n d :quit<cr>
-
-" - support HHKB layout.
+"
+"  - support HHKB layout.
 map -modes=i,c <C-h> <left>
 map -modes=i,c <C-j> <down>
 map -modes=i,c <C-k> <up>
 map -modes=i,c <C-l> <right>
 map -modes=i,n,c <S-ESC> ~
-
-"  - for mapping ctrl + h, j, k, l with /usr/share/X11/xkb/symbols/us [1].
+"
+"   - for mapping ctrl + h, j, k, l with /usr/share/X11/xkb/symbols/us [1].
 map -modes=i,c <C-down> <down>
 map -modes=i,c <C-up> <up>
-
-" Download box
+"
+"  - Download box
 map -modes=n <ESC>l -builtin <C-v><C-s-y>
-
-" - Scroll page.
+"
+"  - Scroll page.
 map -modes=n j -builtin 3j
 map -modes=n J <C-d>
 map -modes=n k -builtin 3k
 map -modes=n K <C-u>
 map -modes=n b <PageUp>
-
-" - Buffer (quick search tab and switch).
+"
+"  - Buffer (quick search tab and switch).
 map -modes=n,v <C-p> -builtin b
 map -modes=n,v <C-r> -builtin b
-
-" - Bookmarks.
-"  - Add Bookmark.
+"
+"  - Bookmarks.
+"   - Add Bookmark.
 map -modes=n <ESC>a -builtin <C-v><C-d>
-
-"  - Open Bookmarks Library.
+"
+"   - Open Bookmarks Library.
 map -modes=n <ESC>b -builtin <C-S-o>
-
-" - Enabled 'Inspect' of Web Developer plugin..
+"
+"  - Enabled 'Inspect' of Web Developer plugin..
 map -modes=n <A-d> <C-S-i>
 map -modes=n <A-c> <C-S-c>
-
-" - Trigger 'Group Tabs'.
+"
+"  - Trigger 'Group Tabs'.
 map -modes=n <A-e> <C-S-e>
-
-" - Open Firebug UI.
+"
+"  - Open Firebug UI.
 map -modes=n <A-f> <F12>
-
-" - Tag switch
+"
+"  - Tag switch
 map -modes=n <A-j> gt
 map -modes=n <A-k> gT
 map -modes=n <A-1> -builtin 1gt
@@ -103,55 +113,52 @@ map -modes=n <A-5> -builtin 5gt
 map -modes=n <A-7> -builtin 7gt
 map -modes=n <A-8> -builtin 8gt
 map -modes=n <A-9> -builtin 99gt
-
-" - history switch
+"
+"  - history switch
 map -modes=n <C-j> :forward<Return>
 map -modes=n <C-k> :back<Return>
-
-" - GUI switch.
+"
+"  - GUI switch.
 map -modes=n <F7> :set<Space>guioptions=BNsT<Space><Return>
 map -modes=n <F8> :set<Space>guioptions=BNs<Space><Return>
 map -modes=n <F9> :set<Space>guioptions-=Bs<Space><Return>
-
-" - Post (link) share.
-
-"  - springpad.
-map -modes=n ss o  javascript:(function(){SP_HOST='//springpad.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=SP_HOST+'/public/clipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){var%20u=SP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&amp;title='+encodeURIComponent(document&&document.title||'');try{window.open(u,'sp_popout','width=630,height=600');}catch(e){window.location=u;}}})(); <Return>
-
-"  - Diggo.
+"
+"  - Post (link) share.
+"
+"   - Diggo.
 "map -modes=n sd o javascript:javascript:(function(){DIIGO_R_TEST=false;DIIGO_R_SCRIPT=document.createElement('SCRIPT');DIIGO_R_SCRIPT.type='text/javascript';DIIGO_R_SCRIPT.src='http://www.diigo.com/javascripts/readlater.js';document.getElementsByTagName('body')[0].appendChild(DIIGO_R_SCRIPT)})(); <Return>
-
-"  - Evernote.
+"
+"   - Evernote.
 map -modes=n se o javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title);}})(); <Return>
-
-"  - Facebook.
+"
+"   - Facebook.
 map -modes=n sf o javascript:var%20d=document,f='http://www.facebook.com/share',l=d.location,e=encodeURIComponent,p='.php?src=bm&v=4&i=1253986134&u='+e(l.href)+'&t='+e(d.title);1;try{if%20(!/^(.*\.)?facebook\.[^.]*$/.test(l.host))throw(0);share_internal_bookmarklet(p)}catch(z)%20{a=function()%20{if%20(!window.open(f+'r'+p,'sharer','toolbar=0,status=0,resizable=1,width=626,height=436'))l.href=f+p};if%20(/Firefox/.test(navigator.userAgent))setTimeout(a,0);else{a()}}void(0) <Return>
-
-"  - Plurk.
+"
+"   - Plurk.
 map -modes=n sp o javascript:%20void(window.open('http://www.plurk.com/m?qualifier=shares&content='%20.concat(encodeURIComponent(location.href))%20.concat('%20')%20.concat('(')%20.concat(encodeURIComponent(document.title))%20.concat(')'))); <Return>
-
-" - Doing something with selected.
-
-"  - Open URL, bookmarks or history.
+"
+"  - Doing something with selected.
+"
+"   - Open URL, bookmarks or history.
 map -modes=n o -js content.getSelection().toString()!=""?dactyl.execute(":open "+ content.getSelection()):CommandExMode().open("open ")
 map -modes=n t -js content.getSelection().toString()!=""?dactyl.execute(":tabopen "+ content.getSelection()):CommandExMode().open("tabopen ")
-
-"  - Liu (boshiamy) IME.
+"
+"   - Liu (boshiamy) IME.
 map -modes=n x -js content.getSelection().toString()!=""?dactyl.execute(":tabopen http://liu.twbbs.org/liuzmd1/index.php?tde_string="+ content.getSelection()):CommandExMode().open("tabopen ")
-
-"  - Chinese-English Dictionary / Calculator
+"
+"   - Chinese-English Dictionary / Calculator
 map -modes=n <F1> -js content.getSelection().toString()!=""?dactyl.execute(":tabopen http://cdict.net/?q="+ content.getSelection()):CommandExMode().open("tabopen ")
 
-" - Quick open link.
-
-"  - Diigo.
+"  - Quick open link.
+"
+"   - Diigo.
 "map -modes=n <ESC>g t http://www.diigo.com/user/chusiang <Return>
-
-"  - history
+"
+"   - history
 map -modes=n <ESC>h :hs! 
 
-" = Abbreviate =
-
+" # Abbreviate
+"
 cabbreviate dl downloads
 cabbreviate wi !whois
 cabbreviate tr !traceroute
@@ -168,8 +175,4 @@ iabbreviate vimp Vimperator
 
 
 " vim: set ft=pentadactyl:
-
-" = Reference =
-" [1] macros - Mapping Super+hjkl to arrow keys under X - Super User
-" - http://superuser.com/questions/96299/mapping-superhjkl-to-arrow-keys-under-x
 

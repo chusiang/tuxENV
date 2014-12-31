@@ -1,1 +1,10 @@
+# ============================================================
+#  Author: 凍仁翔 / chusiang.lai (at) gmail.com
+#  Blog: http://note.drx.tw
+#  Filename: _inputrc
+#  Modified: 2014-12-31 10:09
+#  Description: Setting vi-mode at inputing (ex. MySQL Shell).
+#  Reference: 
+# =========================================================== 
+
 set editing-mode vi

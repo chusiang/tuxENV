@@ -1,4 +1,11 @@
-# = rtorrent 設定檔 =
+# ============================================================
+#  Author: 凍仁翔 / chusiang.lai (at) gmail.com
+#  Blog: http://note.drx.tw
+#  Filename: _rtorrent.rc
+#  Modified: 2014-12-31 10:06
+#  Description: config for rtorrent.
+#  Reference: 
+# =========================================================== 
 
 # 最小/最大連接數
 min_peers = 40
@@ -40,3 +47,4 @@ peer_exchange = yes
 
 #hash 檢查 (單位 milliseconds)
 hash_interval = 150
+

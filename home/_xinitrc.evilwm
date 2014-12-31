@@ -1,3 +1,12 @@
+# ============================================================
+#  Author: 凍仁翔 / chusiang.lai (at) gmail.com
+#  Blog: http://note.drx.tw
+#  Filename: _xinitrc.evilwm
+#  Modified: 2014-12-31 09:50
+#  Description: Run EvilWM config with startx.
+#  Reference: 
+# =========================================================== 
+
 numlockx &
 
 # Merge X resources from ~/.Xdefaults

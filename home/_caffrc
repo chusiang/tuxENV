@@ -1,3 +1,12 @@
+# ============================================================
+#  Author: 凍仁翔 / chusiang.lai (at) gmail.com
+#  Blog: http://note.drx.tw
+#  Filename: _caffrc
+#  Modified: 2014-12-31 10:13
+#  Description: config for caff.
+#  Reference: 
+# =========================================================== 
+
 # .caffrc -- vim:ft=perl:
 # This file is in perl(1) format - see caff(1) for details.
 

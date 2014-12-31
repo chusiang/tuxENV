@@ -1,5 +1,16 @@
-# FileName:	.Xdefaults
-# Info:		'rxvf-unicode' configure.
+# ============================================================
+#  Author: 凍仁翔 / chusiang.lai (at) gmail.com
+#  Blog: http://note.drx.tw
+#  Filename: _Xdefaults
+#  Modified: 2014-12-31 09:42
+#  Description: configure for rxvf-unicode.
+#  Reference: 
+#   1. http://www.htmlgoodies.com/tutorials/colors/article.php/3478921
+#   2. https://wiki.archlinux.org/index.php/Rxvt-unicode
+#   3. http://awesome.naquadah.org/wiki/Urxvt_tips
+#   4. http://www.saltycrane.com/blog/2009/11/how-make-urxvt-look-gnome-terminal/
+#   5. https://bbs.archlinux.org/viewtopic.php?id=148147
+# =========================================================== 
 
 # General
 # ========
@@ -84,7 +95,7 @@ URxvt.color15:	#EEEEEC
 #
 # using the composite manager currently running. (xcompmgr, dcompmgr, compiz...)
 URxvt.depth: 32
-URxvt.background: [80]#000000
+URxvt.background: [75]#000000
 #
 #  - fake transparency: true or false (default).
 #
@@ -188,21 +199,4 @@ URxvt.keysym.M-s: perl:keyboard-select:search
 #URxvt.keysym.M-p:   perl:clipboard:paste
 #URxvt.clipboard.copycmd:  xclip -i -selection clipboard
 #URxvt.clipboard.pastecmd: xclip -o -selection clipboard
-
-
-
-# Reference
-# ========
-#
-# [1] http://www.htmlgoodies.com/tutorials/colors/article.php/3478921
-# [2] https://wiki.archlinux.org/index.php/Rxvt-unicode
-# [3] http://awesome.naquadah.org/wiki/Urxvt_tips
-# [4] http://www.saltycrane.com/blog/2009/11/how-make-urxvt-look-gnome-terminal/
-# [5] https://bbs.archlinux.org/viewtopic.php?id=148147
-
-# ---------------------------
-# Author : Chu-Siang Lai
-# E-mail : jonny (at) drx.tw
-# Blog : http://note.drx.tw
-# ---------------------------
 
