@@ -25,7 +25,7 @@ sudo "$PATH_TP/trackpoint-speed.sh"
 # - Scrolling.
 #  - ThinkPad PS/2 keyboard.
 TP_PS2_KB_COUNT=`xinput list | grep 14 | wc -l`
-if [ $TP_PS2_KB_COUNT -ne "1" ]; then
+if [ $TP_PS2_KB_COUNT -eq "1" ]; then
   xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation" 8 1
   xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Button" 8 2
   xinput set-int-prop "TPPS/2 IBM TrackPoint" "Evdev Wheel Emulation Axes" 8 6 7 4 5
@@ -33,7 +33,7 @@ fi
 
 #  - ThinkPad USB keyboard.
 TP_USB_KB_COUNT=`xinput list | grep 11 | wc -l`
-if [ $TP_USB_KB_COUNT -ne "1" ]; then
+if [ $TP_USB_KB_COUNT -eq "1" ]; then
   xinput --set-prop --type=int --format=8 11 "Evdev Wheel Emulation" 1
   xinput --set-prop --type=int --format=8 11 "Evdev Wheel Emulation Button" 2
   xinput --set-prop --type=int --format=8 11 "Evdev Wheel Emulation Axes" 6 7 4 5
