@@ -1,11 +1,29 @@
+# ============================================================
+#  Author: 凍仁翔 / chusiang.lai (at) gmail.com
+#  Blog: http://note.drx.tw
+#  Filename: _bash_aliases
+#  Modified: 2015-01-12 09:45
+#  Description: alias config for bashrc.
+#  Reference: 
+# =========================================================== 
+
 #!/bin/bash
 
-# = alias for bashrc =
-
+# Color
+# ======
+#
+# color the files of directory, zip, execute ... etc.
 eval "`dircolors`"
 export LS_OPTIONS='--color=auto'
 
-# == file manager ==
+# color the diff.
+if [ -f /usr/bin/colordiff ]; then
+  alias diff="colordiff"
+fi
+
+# File Manager
+# =============
+#
 alias cd.='cd ..'
 alias cd..='cd ../..'
 alias cd...='cd ../../..'
@@ -24,33 +42,41 @@ alias lt='tree'
 alias grep='grep $LS_OPTIONS'
 alias egrep='egrep $LS_OPTIONS'
 
-# == editor ==
+# Editor
+# =======
+#
 #alias vi='vim -R'
 alias vr='vim -R'
 alias vd='vimdiff'
 alias gvir='gvim --remote-tab'
 alias gvis='gvim --remote +split'
 
-# == system ==
-#alias co="cd $OLDPWD" -> cd -
+# system
+# =======
+#
+# - Fool-proofing 
 alias ifconfig='/sbin/ifconfig'
 alias reboot='/sbin/shutdown -r now'
+alias pdf='atril'
+
+# - Themes
 alias mocp='mocp -T moca_theme'
-alias screen='screen -RD'
 alias sm='sm --background=#000 --foreground=#ff0000'
-alias rxvt='rxvt-unicode'
-alias irc='rxvt -name IRC -e irss'
+
+# - ssh
+#alias gsh='ssh -t guest-xp ssh'
+alias msh='mosh'
+
+# - screen and tmux
+alias screen='screen -RD'
 alias tmux="TERM=screen-256color-bce tmux"
 alias tmux0="TERM=screen-256color-bce tmux a -t 0"
 alias tmux1="TERM=screen-256color-bce tmux a -t 1"
+
+# - rxvt
+alias rxvt='rxvt-unicode'
+alias irc='rxvt -name IRC -e irss'
+
+# - ramdisk
 alias chromium='chromium --disk-cache-dir=/dev/shm/Cache/Chromium'
-alias pdf='atril'
-
-alias gsh='ssh -t guest-xp ssh'
-alias msh='mosh'
-
-# -----------------------------------
-# Author : Chu-Siang Lai
-# E-mail : jonny (at) drx.tw
-# Blog : http://note.drx.tw
-# -----------------------------------
+#alias co="cd $OLDPWD" <---- 'cd -'
