@@ -1,9 +1,15 @@
-"0.6 (created: 2010/03/29 00:59:39)
+"1.2 (created: 2013/10/13 18:08:56)
 
-map <F7> :set<Space>guioptions+=m<Space><Return>
-map <F8> :set<Space>guioptions=fF<Space><Return>
+set gui=nomenu,tabs,status,folderlist,mail
 
-set guioptions=f
+" Show Message Pane
+nnoremap <F6> <F8>
+
+" Quick switch gui style
+nmap <F7> :set<Space>gui=all<Return>
+nmap <F8> :set<Space>gui=nomenu,tabs,status,folderlist,mail<Return>
+nmap <F9> :set<Space>gui=none<Return>
+
 
 source! /home/jonny/.muttatorrc.local
 
