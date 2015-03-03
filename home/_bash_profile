@@ -27,6 +27,11 @@ if [ -d "$HOME/.tmuxifier/bin" ] ; then
 	PATH="$PATH:~/.tmuxifier/bin"
 fi
 
+# bash_completion with homebrew.
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+  . $(brew --prefix)/etc/bash_completion
+fi
+
 # ------------------------------------
 # Author : Chu-Siang Lai
 # E-mail : jonny (at) drx.tw
