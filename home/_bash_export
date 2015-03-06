@@ -22,10 +22,10 @@ export EDITOR=vim
 export GIT_EDITOR=vim
 
 # - support rxvt on screen.
-export TERM=rxvt-unicode
+#export TERM=rxvt-unicode
 
-# - support 236color at tmux.
-#export TERM="xterm-256color"
+# - support 256color for tmux and iTerm2.
+export TERM="xterm-256color"
 
 # - java.
 #export JAVA_HOME=/usr/lib/jvm/java-7-openjdk-amd64
@@ -42,6 +42,7 @@ export AZ="A B C D E F G H I J K L M N O P Q R S T U V W X Y Z"
 
 # - time out with 60 min.
 #export TMOUT=600
+
 
 # ------------------------------------
 # Author : Chu-Siang Lai
