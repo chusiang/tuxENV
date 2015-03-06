@@ -121,6 +121,13 @@ if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
 
+# set bash_completion with homebrew under Mac OSX.
+if [ "$(uname)" == "Darwin" ]; then
+  if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+  fi
+fi
+
 # enable the autojump.
 if [ -f /usr/share/autojump/autojump.bash ]; then
     . /usr/share/autojump/autojump.bash
