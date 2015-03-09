@@ -100,28 +100,24 @@ xterm*|rxvt*)
     ;;
 esac
 
-# Alias definitions.
-# You may want to put all your additions into a separate file like
-# ~/.bash_aliases, instead of adding them here directly.
-# See /usr/share/doc/bash-doc/examples in the bash-doc package.
-
+# load custom aliases.
 if [ -f ~/.bash_aliases ]; then
     . ~/.bash_aliases
 fi
 
-# custom export.
+# load custom export.
 if [ -f ~/.bash_export ]; then
     . ~/.bash_export
 fi
 
-# enable programmable completion features (you don't need to enable
-# this, if it's already enabled in /etc/bash.bashrc and /etc/profile
-# sources /etc/bash.bashrc).
+# enable the bash_completion
+#
+# - under GNU/Linux.
 if [ -f /etc/bash_completion ] && ! shopt -oq posix; then
     . /etc/bash_completion
 fi
-
-# set bash_completion with homebrew under Mac OSX.
+#
+# - under Mac OSX (homebrew).
 if [ "$(uname)" == "Darwin" ]; then
   if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
@@ -129,9 +125,17 @@ if [ "$(uname)" == "Darwin" ]; then
 fi
 
 # enable the autojump.
+#
+# - under GNU/Linux
 if [ -f /usr/share/autojump/autojump.bash ]; then
-    . /usr/share/autojump/autojump.bash
+  . /usr/share/autojump/autojump.bash
 fi
+#
+# - under Mac OSX (homebrew).
+if [ -f /usr/local/share/autojump/autojump.bash ]; then
+  . /usr/local/share/autojump/autojump.bash
+fi
+
 
 # == Color Man Pages ==
 
