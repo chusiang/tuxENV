@@ -33,7 +33,7 @@ fi
 
 #  - ThinkPad USB keyboard.
 TP_USB_KB_COUNT=`xinput list | grep 11 | wc -l`
-if [ $TP_USB_KB_COUNT -eq "1" ]; then
+if [ $TP_USB_KB_COUNT -eq "2" ]; then
   xinput --set-prop --type=int --format=8 11 "Evdev Wheel Emulation" 1
   xinput --set-prop --type=int --format=8 11 "Evdev Wheel Emulation Button" 2
   xinput --set-prop --type=int --format=8 11 "Evdev Wheel Emulation Axes" 6 7 4 5
