@@ -2,7 +2,7 @@
 "  Author: 凍仁翔 / chusiang.lai (at) gmail.com
 "  Blog: http://note.drx.tw
 "  Filename: _pentadactylrc
-"  Modified: 2014-12-31 09:56
+"  Modified: 2015-04-07 10:20
 "  Description: 
 "  Reference: 
 "   1. macros - Mapping Super+hjkl to arrow keys under X - http://superuser.com/questions/96299/mapping-superhjkl-to-arrow-keys-under-x
@@ -18,9 +18,9 @@ group user
 autocmd LocationChange disp\.cc/ -js modes.set(modes.PASS_THROUGH)
 autocmd LocationChange (mail|www)\.google\.com/(calendar|mail|reader)/ -js modes.set(modes.PASS_THROUGH)
 autocmd LocationChange docs\.google\.com/(document|present|spreadsheet) -js modes.set(modes.PASS_THROUGH)
-autocmd LocationChange mail\.yahoo\.com/ -js modes.set(modes.PASS_THROUGH)
-autocmd LocationChange github\.com/ -js modes.set(modes.PASS_THROUGH)
-autocmd LocationChange bitbucket\.org/ -js modes.set(modes.PASS_THROUGH)
+"autocmd LocationChange mail\.yahoo\.com/ -js modes.set(modes.PASS_THROUGH)
+"autocmd LocationChange github\.com/ -js modes.set(modes.PASS_THROUGH)
+"autocmd LocationChange bitbucket\.org/ -js modes.set(modes.PASS_THROUGH)
 
 " # GUI
 "
@@ -50,6 +50,7 @@ highlight StatusLineNormal color: #999999 ; background: #090909 !important; font
 " # Keymap
 "
 map -modes=n,v <C-a> <C-v><C-a>
+map -modes=n,v <M-a> <C-v><C-a>
 map -modes=n,v <C-c> -builtin <C-v><C-c>
 map -modes=n,v <C-s> -builtin <C-c>
 map -modes=i <C-x> -builtin <C-v><C-x>
@@ -97,14 +98,17 @@ map -modes=n <A-d> <C-S-i>
 map -modes=n <A-c> <C-S-c>
 "
 "  - Trigger 'Group Tabs'.
-map -modes=n <A-e> <C-S-e>
+"map -modes=n <A-e> <C-S-e>
+map -modes=n <M-e> <M-S-e>
 "
 "  - Open Firebug UI.
 map -modes=n <A-f> <F12>
 "
 "  - Tag switch
-map -modes=n <A-j> gt
-map -modes=n <A-k> gT
+"map -modes=n <A-j> gt
+map -modes=n <M-j> -builtin gt
+"map -modes=n <A-k> gT
+map -modes=n <M-k> -builtin gT
 map -modes=n <A-1> -builtin 1gt
 map -modes=n <A-2> -builtin 2gt
 map -modes=n <A-3> -builtin 3gt
@@ -115,8 +119,8 @@ map -modes=n <A-8> -builtin 8gt
 map -modes=n <A-9> -builtin 99gt
 "
 "  - history switch
-map -modes=n <C-j> :forward<Return>
-map -modes=n <C-k> :back<Return>
+map -modes=n <C-l> :forward<Return>
+map -modes=n <C-h> :back<Return>
 "
 "  - GUI switch.
 map -modes=n <F7> :set<Space>guioptions=BNsT<Space><Return>
@@ -172,6 +176,8 @@ iabbreviate pent Pentadactyl
 iabbreviate tp ThinkPad
 iabbreviate ubu Ubuntu
 iabbreviate vimp Vimperator
+
+set editor='~/bin/mvim -f +<line> +"sil! call cursor(0, <column>)" <file>'
 
 
 " vim: set ft=pentadactyl:
