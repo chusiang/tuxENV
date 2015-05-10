@@ -2,9 +2,8 @@
 #  Author: 凍仁翔 / chusiang.lai (at) gmail.com
 #  Blog: http://note.drx.tw
 #  Filename: _gitconfig
-#  Modified: 2014-12-31 10:06
+#  Modified: 2015-05-11 06:50
 #  Description: config for git.
-#  Reference: 
 # =========================================================== 
 
 # - Account
@@ -29,19 +28,20 @@
 
 # Alias and Abbreveviation.
 [alias]
-	co = checkout
-	cm = commit
+	co   = checkout
+	cm   = commit
 	recm = commit --amend
-	di = diff
-	df = diff
-	st = status
-	br = branch
-	re = remote
-	lg = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	lo = log --color --pretty=format:'%Cred%h%Creset %s' --abbrev-commit 
+	df   = diff
+	dfn  = diff --name-only
+	st   = status
+	br   = branch
+	re   = remote
+	lg   = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+	lo   = log --color --pretty=format:'%Cred%h%Creset %s' --abbrev-commit 
 	#ls = log --color --pretty=oneline --pretty=format:'%Cred' --abbrev-commit 
-	me = merge --no-ff
-	mg = merge --no-ff
-	nfmerge = merge --no-ff
-	resetToFront = reset --soft HEAD^
+	me   = merge --no-ff
+	mg   = merge --no-ff
+	re2Front = reset --soft HEAD^
 
+[push]
+	default = simple
