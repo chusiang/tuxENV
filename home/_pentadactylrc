@@ -2,7 +2,7 @@
 "  Author: 凍仁翔 / chusiang.lai (at) gmail.com
 "  Blog: http://note.drx.tw
 "  Filename: _pentadactylrc
-"  Modified: 2015-04-07 10:20
+"  Modified: 2015-03-05 14:00
 "  Description: 
 "  Reference: 
 "   1. macros - Mapping Super+hjkl to arrow keys under X - http://superuser.com/questions/96299/mapping-superhjkl-to-arrow-keys-under-x
@@ -49,7 +49,6 @@ highlight StatusLineNormal color: #999999 ; background: #090909 !important; font
 
 " # Keymap
 "
-map -modes=n,v <C-a> <C-v><C-a>
 map -modes=n,v <M-a> <C-v><C-a>
 map -modes=n,v <C-c> -builtin <C-v><C-c>
 map -modes=n,v <C-s> -builtin <C-c>
@@ -141,6 +140,9 @@ map -modes=n sf o javascript:var%20d=document,f='http://www.facebook.com/share',
 "   - Plurk.
 map -modes=n sp o javascript:%20void(window.open('http://www.plurk.com/m?qualifier=shares&content='%20.concat(encodeURIComponent(location.href))%20.concat('%20')%20.concat('(')%20.concat(encodeURIComponent(document.title))%20.concat(')'))); <Return>
 "
+"   - Twitter
+map -modes=n st o javascript:(function(){window.twttr=window.twttr||{};var%20D=550,A=450,C=screen.height,B=screen.width,H=Math.round((B/2)-(D/2)),G=0,F=document,E;if(C>A){G=Math.round((C/2)-(A/2))}window.twttr.shareWin=window.open('http://twitter.com/share','','left='+H+',top='+G+',width='+D+',height='+A+',personalbar=0,toolbar=0,scrollbars=1,resizable=1');E=F.createElement('script');E.src='http://platform.twitter.com/bookmarklets/share.js?v=1';F.getElementsByTagName('head')[0].appendChild(E)}()); <Return>
+"
 "  - Doing something with selected.
 "
 "   - Open URL, bookmarks or history.
@@ -177,7 +179,8 @@ iabbreviate tp ThinkPad
 iabbreviate ubu Ubuntu
 iabbreviate vimp Vimperator
 
-set editor='~/bin/mvim -f +<line> +"sil! call cursor(0, <column>)" <file>'
+"set editor='open -a macvim -f +<line> +"sil! call cursor(0, <column>)" <file>'
+set editor='/Users/jonny/bin/mvim -f +<line> +"sil! call cursor(0, <column>)" <file>'
 
 
 " vim: set ft=pentadactyl:
