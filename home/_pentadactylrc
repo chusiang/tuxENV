@@ -173,9 +173,18 @@ iabbreviate tp ThinkPad
 iabbreviate ubu Ubuntu
 iabbreviate vimp Vimperator
 
-"set editor='open -a macvim -f +<line> +"sil! call cursor(0, <column>)" <file>'
-set editor='/Users/jonny/bin/mvim -f +<line> +"sil! call cursor(0, <column>)" <file>'
-
+" # Editor
+"
+js <<EOM
+switch (services.runtime.OS) {
+  case "Darwin": 
+    options.editor = '/Users/jonny/bin/mvim -f +<line> +"sil! call cursor(0, <column>)" <file>';
+    break;
+  case "Linux":
+    options.editor = 'gvim -f +<line> +"sil! call cursor(0, <column>)" <file>';
+    break;
+}
+EOM
 
 " vim: set ft=pentadactyl:
 
