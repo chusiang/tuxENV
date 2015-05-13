@@ -19,8 +19,8 @@ autocmd LocationChange disp\.cc/ -js modes.set(modes.PASS_THROUGH)
 autocmd LocationChange (mail|www)\.google\.com/(calendar|mail|reader)/ -js modes.set(modes.PASS_THROUGH)
 autocmd LocationChange docs\.google\.com/(document|present|spreadsheet) -js modes.set(modes.PASS_THROUGH)
 autocmd LocationChange mail\.yahoo\.com/ -js modes.set(modes.PASS_THROUGH)
-autocmd LocationChange github\.com/ -js modes.set(modes.PASS_THROUGH)
-autocmd LocationChange bitbucket\.org/ -js modes.set(modes.PASS_THROUGH)
+"autocmd LocationChange github\.com/ -js modes.set(modes.PASS_THROUGH)
+"autocmd LocationChange bitbucket\.org/ -js modes.set(modes.PASS_THROUGH)
 
 " # GUI
 "
@@ -55,7 +55,7 @@ map -modes=n,v <C-s> -builtin <C-c>
 map -modes=i <C-x> -builtin <C-v><C-x>
 map -modes=i <C-z> -builtin <C-v><C-z>
 map -modes=i <C-y> -builtin <C-v><C-y>
-"map -modes=i jj -builtin <ESC>
+map -modes=i jj -builtin <ESC>
 "
 "  - Close Tab.
 "map -modes=n d :quit<cr>
@@ -75,10 +75,10 @@ map -modes=i,c <C-up> <up>
 map -modes=n <ESC>l -builtin <C-v><C-s-y>
 "
 "  - Scroll page.
-map -modes=n j -builtin 3j
-map -modes=n J <C-d>
-map -modes=n k -builtin 3k
-map -modes=n K <C-u>
+map -modes=n j <C-d>
+map -modes=n J -builtin 3j
+map -modes=n k <C-u>
+map -modes=n K -builtin 3k
 map -modes=n b <PageUp>
 "
 "  - Buffer (quick search tab and switch).
@@ -115,8 +115,8 @@ map -modes=n <A-8> -builtin 8gt
 map -modes=n <A-9> -builtin 99gt
 "
 "  - history switch
-map -modes=n <C-j> :forward<Return>
-map -modes=n <C-k> :back<Return>
+map -modes=n <C-h> :back<Return>
+map -modes=n <C-l> :forward<Return>
 "
 "  - GUI switch.
 map -modes=n <F7> :set<Space>guioptions=BNsT<Space><Return>
@@ -124,9 +124,6 @@ map -modes=n <F8> :set<Space>guioptions=BNs<Space><Return>
 map -modes=n <F9> :set<Space>guioptions-=Bs<Space><Return>
 "
 "  - Post (link) share.
-"
-"   - Diggo.
-"map -modes=n sd o javascript:javascript:(function(){DIIGO_R_TEST=false;DIIGO_R_SCRIPT=document.createElement('SCRIPT');DIIGO_R_SCRIPT.type='text/javascript';DIIGO_R_SCRIPT.src='http://www.diigo.com/javascripts/readlater.js';document.getElementsByTagName('body')[0].appendChild(DIIGO_R_SCRIPT)})(); <Return>
 "
 "   - Evernote.
 map -modes=n se o javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title);}})(); <Return>
@@ -150,9 +147,6 @@ map -modes=n x -js content.getSelection().toString()!=""?dactyl.execute(":tabope
 map -modes=n <F1> -js content.getSelection().toString()!=""?dactyl.execute(":tabopen http://cdict.net/?q="+ content.getSelection()):CommandExMode().open("tabopen ")
 
 "  - Quick open link.
-"
-"   - Diigo.
-"map -modes=n <ESC>g t http://www.diigo.com/user/chusiang <Return>
 "
 "   - history
 map -modes=n <ESC>h :hs! 
