@@ -97,16 +97,16 @@ map -modes=n <A-d> <C-S-i>
 map -modes=n <A-c> <C-S-c>
 "
 "  - Trigger 'Group Tabs'.
-"map -modes=n <A-e> <C-S-e>
+map -modes=n <A-e> <C-S-e>
 map -modes=n <M-e> <M-S-e>
 "
 "  - Open Firebug UI.
 map -modes=n <A-f> <F12>
 "
 "  - Tag switch
-"map -modes=n <A-j> gt
+map -modes=n <A-j> gt
 map -modes=n <M-j> -builtin gt
-"map -modes=n <A-k> gT
+map -modes=n <A-k> gT
 map -modes=n <M-k> -builtin gT
 map -modes=n <A-1> -builtin 1gt
 map -modes=n <A-2> -builtin 2gt
@@ -185,6 +185,9 @@ switch (services.runtime.OS) {
     break;
 }
 EOM
+
+" # Disable the Alt key to toggle Menu bar.
+set! ui.key.menuAccessKeyFocuses=false
 
 " vim: set ft=pentadactyl:
 
