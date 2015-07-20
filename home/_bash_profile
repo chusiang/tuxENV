@@ -27,6 +27,18 @@ if [ -d "$HOME/.tmuxifier/bin" ] ; then
 	PATH="$PATH:~/.tmuxifier/bin"
 fi
 
+# for Mac OS X.
+if [ "$(uname)" == "Darwin" ]; then
+  # homebrew
+  if [ -d "/usr/local/sbin" ] ; then
+    PATH="/usr/local/sbin:$PATH"
+  fi
+  # docker
+  export DOCKER_HOST=tcp://192.168.59.103:2376
+  export DOCKER_CERT_PATH=/Users/jonny/.boot2docker/certs/boot2docker-vm
+  export DOCKER_TLS_VERIFY=1
+fi
+
 
 # ------------------------------------
 # Author : Chu-Siang Lai
