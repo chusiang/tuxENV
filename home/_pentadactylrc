@@ -2,7 +2,7 @@
 "  Author: 凍仁翔 / chusiang.lai (at) gmail.com
 "  Blog: http://note.drx.tw
 "  Filename: _pentadactylrc
-"  Modified: 2014-12-31 09:56
+"  Modified: 2015-03-05 14:00
 "  Description: 
 "  Reference: 
 "   1. macros - Mapping Super+hjkl to arrow keys under X - http://superuser.com/questions/96299/mapping-superhjkl-to-arrow-keys-under-x
@@ -18,14 +18,18 @@ group user
 autocmd LocationChange disp\.cc/ -js modes.set(modes.PASS_THROUGH)
 autocmd LocationChange (mail|www)\.google\.com/(calendar|mail|reader)/ -js modes.set(modes.PASS_THROUGH)
 autocmd LocationChange docs\.google\.com/(document|present|spreadsheet) -js modes.set(modes.PASS_THROUGH)
-autocmd LocationChange mail\.yahoo\.com/ -js modes.set(modes.PASS_THROUGH)
-autocmd LocationChange github\.com/ -js modes.set(modes.PASS_THROUGH)
-autocmd LocationChange bitbucket\.org/ -js modes.set(modes.PASS_THROUGH)
+"autocmd LocationChange mail\.yahoo\.com/ -js modes.set(modes.PASS_THROUGH)
+"autocmd LocationChange github\.com/ -js modes.set(modes.PASS_THROUGH)
+"autocmd LocationChange bitbucket\.org/ -js modes.set(modes.PASS_THROUGH)
 
 " # GUI
 "
 "  - Default show GUI elements of 'Bookmarks Toobar', 'Tab number over image' and 'Status bar'.
 set guioptions=BNs
+
+"  - Disable Alt key to toggle hidden Menu bar for Debian, Ubuntu.
+set guioptions-=m
+set! ui.key.menuAccessKeyFocuses=false
 
 " # Options
 "
@@ -49,13 +53,13 @@ highlight StatusLineNormal color: #999999 ; background: #090909 !important; font
 
 " # Keymap
 "
-map -modes=n,v <C-a> <C-v><C-a>
+map -modes=n,v <M-a> <C-v><C-a>
 map -modes=n,v <C-c> -builtin <C-v><C-c>
 map -modes=n,v <C-s> -builtin <C-c>
 map -modes=i <C-x> -builtin <C-v><C-x>
 map -modes=i <C-z> -builtin <C-v><C-z>
 map -modes=i <C-y> -builtin <C-v><C-y>
-"map -modes=i jj -builtin <ESC>
+map -modes=i jj -builtin <ESC>
 "
 "  - Close Tab.
 "map -modes=n d :quit<cr>
@@ -75,10 +79,10 @@ map -modes=i,c <C-up> <up>
 map -modes=n <ESC>l -builtin <C-v><C-s-y>
 "
 "  - Scroll page.
-map -modes=n j -builtin 3j
-map -modes=n J <C-d>
-map -modes=n k -builtin 3k
-map -modes=n K <C-u>
+map -modes=n j <C-d>
+map -modes=n J -builtin 3j
+map -modes=n k <C-u>
+map -modes=n K -builtin 3k
 map -modes=n b <PageUp>
 "
 "  - Buffer (quick search tab and switch).
@@ -98,13 +102,16 @@ map -modes=n <A-c> <C-S-c>
 "
 "  - Trigger 'Group Tabs'.
 map -modes=n <A-e> <C-S-e>
+map -modes=n <M-e> <M-S-e>
 "
 "  - Open Firebug UI.
 map -modes=n <A-f> <F12>
 "
 "  - Tag switch
 map -modes=n <A-j> gt
+map -modes=n <M-j> -builtin gt
 map -modes=n <A-k> gT
+map -modes=n <M-k> -builtin gT
 map -modes=n <A-1> -builtin 1gt
 map -modes=n <A-2> -builtin 2gt
 map -modes=n <A-3> -builtin 3gt
@@ -115,8 +122,8 @@ map -modes=n <A-8> -builtin 8gt
 map -modes=n <A-9> -builtin 99gt
 "
 "  - history switch
-map -modes=n <C-j> :forward<Return>
-map -modes=n <C-k> :back<Return>
+map -modes=n <C-h> :back<Return>
+map -modes=n <C-l> :forward<Return>
 "
 "  - GUI switch.
 map -modes=n <F7> :set<Space>guioptions=BNsT<Space><Return>
@@ -124,9 +131,6 @@ map -modes=n <F8> :set<Space>guioptions=BNs<Space><Return>
 map -modes=n <F9> :set<Space>guioptions-=Bs<Space><Return>
 "
 "  - Post (link) share.
-"
-"   - Diggo.
-"map -modes=n sd o javascript:javascript:(function(){DIIGO_R_TEST=false;DIIGO_R_SCRIPT=document.createElement('SCRIPT');DIIGO_R_SCRIPT.type='text/javascript';DIIGO_R_SCRIPT.src='http://www.diigo.com/javascripts/readlater.js';document.getElementsByTagName('body')[0].appendChild(DIIGO_R_SCRIPT)})(); <Return>
 "
 "   - Evernote.
 map -modes=n se o javascript:(function(){EN_CLIP_HOST='http://www.evernote.com';try{var%20x=document.createElement('SCRIPT');x.type='text/javascript';x.src=EN_CLIP_HOST+'/public/bookmarkClipper.js?'+(new%20Date().getTime()/100000);document.getElementsByTagName('head')[0].appendChild(x);}catch(e){location.href=EN_CLIP_HOST+'/clip.action?url='+encodeURIComponent(location.href)+'&title='+encodeURIComponent(document.title);}})(); <Return>
@@ -136,6 +140,9 @@ map -modes=n sf o javascript:var%20d=document,f='http://www.facebook.com/share',
 "
 "   - Plurk.
 map -modes=n sp o javascript:%20void(window.open('http://www.plurk.com/m?qualifier=shares&content='%20.concat(encodeURIComponent(location.href))%20.concat('%20')%20.concat('(')%20.concat(encodeURIComponent(document.title))%20.concat(')'))); <Return>
+"
+"   - Twitter
+map -modes=n st o javascript:(function(){window.twttr=window.twttr||{};var%20D=550,A=450,C=screen.height,B=screen.width,H=Math.round((B/2)-(D/2)),G=0,F=document,E;if(C>A){G=Math.round((C/2)-(A/2))}window.twttr.shareWin=window.open('http://twitter.com/share','','left='+H+',top='+G+',width='+D+',height='+A+',personalbar=0,toolbar=0,scrollbars=1,resizable=1');E=F.createElement('script');E.src='http://platform.twitter.com/bookmarklets/share.js?v=1';F.getElementsByTagName('head')[0].appendChild(E)}()); <Return>
 "
 "  - Doing something with selected.
 "
@@ -150,9 +157,6 @@ map -modes=n x -js content.getSelection().toString()!=""?dactyl.execute(":tabope
 map -modes=n <F1> -js content.getSelection().toString()!=""?dactyl.execute(":tabopen http://cdict.net/?q="+ content.getSelection()):CommandExMode().open("tabopen ")
 
 "  - Quick open link.
-"
-"   - Diigo.
-"map -modes=n <ESC>g t http://www.diigo.com/user/chusiang <Return>
 "
 "   - history
 map -modes=n <ESC>h :hs! 
@@ -173,6 +177,18 @@ iabbreviate tp ThinkPad
 iabbreviate ubu Ubuntu
 iabbreviate vimp Vimperator
 
+" # Editor
+"
+js <<EOM
+switch (services.runtime.OS) {
+  case "Darwin": 
+    options.editor = '/Users/jonny/bin/mvim -f +<line> +"sil! call cursor(0, <column>)" <file>';
+    break;
+  case "Linux":
+    options.editor = 'gvim -f +<line> +"sil! call cursor(0, <column>)" <file>';
+    break;
+}
+EOM
 
 " vim: set ft=pentadactyl:
 
