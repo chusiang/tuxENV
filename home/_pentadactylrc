@@ -27,6 +27,10 @@ autocmd LocationChange docs\.google\.com/(document|present|spreadsheet) -js mode
 "  - Default show GUI elements of 'Bookmarks Toobar', 'Tab number over image' and 'Status bar'.
 set guioptions=BNs
 
+"  - Disable Alt key to toggle hidden Menu bar for Debian, Ubuntu.
+set guioptions-=m
+set! ui.key.menuAccessKeyFocuses=false
+
 " # Options
 "
 "  - Maximum number of items to display at once in a listing.
@@ -185,9 +189,6 @@ switch (services.runtime.OS) {
     break;
 }
 EOM
-
-" # Disable the Alt key to toggle Menu bar.
-set! ui.key.menuAccessKeyFocuses=false
 
 " vim: set ft=pentadactyl:
 
