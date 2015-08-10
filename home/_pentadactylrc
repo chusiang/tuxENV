@@ -92,9 +92,11 @@ map -modes=n,v <C-r> -builtin b
 "  - Bookmarks.
 "   - Add Bookmark.
 map -modes=n <ESC>a -builtin <C-v><C-d>
+map -modes=n <ESC>a -builtin <C-v><M-d>
 "
 "   - Open Bookmarks Library.
 map -modes=n <ESC>b -builtin <C-S-o>
+map -modes=n <ESC>b -builtin <M-S-b>
 "
 "  - Enabled 'Inspect' of Web Developer plugin..
 map -modes=n <A-d> <C-S-i>
@@ -120,6 +122,9 @@ map -modes=n <A-5> -builtin 5gt
 map -modes=n <A-7> -builtin 7gt
 map -modes=n <A-8> -builtin 8gt
 map -modes=n <A-9> -builtin 99gt
+"
+"  - Show a list of all buffers.
+map -modes=n ,l -builtin :ls<Return>
 "
 "  - history switch
 map -modes=n <C-h> :back<Return>
