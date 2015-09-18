@@ -2,7 +2,7 @@
 "  Author: 凍仁翔 / chusiang.lai (at) gmail.com
 "  Blog: http://note.drx.tw
 "  Filename: _pentadactylrc
-"  Modified: 2015-03-05 14:00
+"  Modified: 2015-09-18 11:41
 "  Description: 
 "  Reference: 
 "   1. macros - Mapping Super+hjkl to arrow keys under X - http://superuser.com/questions/96299/mapping-superhjkl-to-arrow-keys-under-x
@@ -60,6 +60,9 @@ map -modes=i <C-x> -builtin <C-v><C-x>
 map -modes=i <C-z> -builtin <C-v><C-z>
 map -modes=i <C-y> -builtin <C-v><C-y>
 map -modes=i jj -builtin <ESC>
+"
+"  - Preferences
+map -modes=n <M-,> :preferences<Return>
 "
 "  - Close Tab.
 "map -modes=n d :quit<cr>
