@@ -35,7 +35,7 @@ process_name = sys.argv[1]
 
 try:
     # get process list.
-    process_output = commands.getoutput('ps -A')
+    process_output = commands.getoutput('ps -aux')
     if process_name in process_output:
         # The Caja is different of other process. It usually bas ran at background.
         if process_name == 'caja':
