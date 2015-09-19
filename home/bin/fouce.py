@@ -19,8 +19,8 @@
   Finally, we can integration the keyboard shortcuts with compiz or xbindkey, like this:
 
     <Super>1 gvim
-    <Super>2 rxvt
-    <Super>3 caja  # File Manager for MATE Desktop Environment.
+    <Super>2 terminator (termin)
+    <Super>3 caja       # File Manager for MATE Desktop Environment.
     <Super>4 iceweasel
     <Super>5 chromium
     <Super>6 chrome
@@ -34,20 +34,29 @@ import commands
 process_name = sys.argv[1]
 
 try:
-    # get process list.
-    process_output = commands.getoutput('ps -aux')
-    if process_name in process_output:
-        # The Caja is different of other process. It usually bas ran at background.
-        if process_name == 'caja':
-            caja_count = commands.getoutput('xdotool search --onlyvisible ' + process_name + ' | wc -l 2> /dev/null')
-            if caja_count > 1:
-                # switch window.
-                os.system("xdotool windowactivate --sync $(xdotool search --onlyvisible " + process_name + " | tail -1) 2> /dev/null")
-        else:
-            # switch window.
-            os.system("xdotool windowactivate --sync $(xdotool search --onlyvisible " + process_name + ") 2> /dev/null")
+  # get process list.
+  process_output = commands.getoutput('ps -A')
+
+  # switch active window.
+  if process_name in process_output:
+
+    # The Caja is different of other process. It usually bas ran at background.
+    if process_name == 'caja':
+      caja_count = commands.getoutput('xdotool search --onlyvisible ' + process_name + ' | wc -l 2> /dev/null')
+      if caja_count > 1:
+        # switch window.
+        os.system("xdotool windowactivate --sync $(xdotool search --onlyvisible " + process_name + " | tail -1) 2> /dev/null")
     else:
-        # execute application.
-        os.system(process_name)
+      # switch window.
+      os.system("xdotool windowactivate --sync $(xdotool search --onlyvisible " + process_name + ") 2> /dev/null")
+
+  # execute application.
+  else:
+    if process_name == 'termin':
+      os.system("terminator")
+    else:
+      os.system(process_name)
+
 except:
-    print "Something wrong, It`s has not run anything."
+  print "Something wrong, It`s has not run anything."
+
