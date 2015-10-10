@@ -59,6 +59,8 @@ map -modes=n,v <C-s> -builtin <C-c>
 map -modes=i <C-x> -builtin <C-v><C-x>
 map -modes=i <C-z> -builtin <C-v><C-z>
 map -modes=i <C-y> -builtin <C-v><C-y>
+map -modes=i <A-c> -builtin <C-v><C-c>
+map -modes=i <A-v> -builtin <C-v><C-v>
 map -modes=i jj -builtin <ESC>
 "
 "  - Preferences
