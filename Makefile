@@ -20,6 +20,7 @@ FILE_SCREENRC=${HOME}/.screenrc
 FILE_TMUXRC=${HOME}/.tmux.conf
 FILE_EDIT_MODE=${HOME}/.inputrc
 FILE_GITCONFIG=${HOME}/.gitconfig
+FILE_MYCLIRC=${HOME}/.myclirc
 
 # - Desktop
 FILE_AWOKENRC=${HOME}/.AwOkenrc
@@ -52,6 +53,7 @@ backup:
 	mv ${FILE_TMUXRC} ${DIR_BAK}/
 	mv ${FILE_EDIT_MODE} ${DIR_BAK}/
 	mv ${FILE_GITCONFIG} ${DIR_BAK}/
+	mv ${FILE_MYCLIRC} ${DIR_BAK}/
 ifeq ($(TYPE), desktop)
 	mv ${FILE_AWOKENRC} ${DIR_BAK}/
 	mv ${FILE_EVILWMRC} ${DIR_BAK}/
@@ -73,6 +75,7 @@ install:
 	cat home/_tmux.conf > ${FILE_TMUXRC}
 	cat home/_inputrc > ${FILE_EDIT_MODE}
 	cat home/_gitconfig > ${FILE_GITCONFIG}
+	cat home/_myclirc > ${FILE_MYCLIRC}
 	cp -a home/bin/ ${DIR_BIN} 
 ifeq ($(TYPE), desktop)
 	@echo '==> Install with desktop.'
@@ -101,6 +104,7 @@ update:
 	rsync -aqz home/_tmux.conf ${FILE_TMUXRC}
 	rsync -aqz home/_inputrc ${FILE_EDIT_MODE}
 	rsync -aqz home/_gitconfig ${FILE_GITCONFIG}
+	rsync -aqz home/_myclirc ${FILE_MYCLIRC}
 	rsync -aqz home/bin/ ${DIR_BIN} 
 ifeq ($(TYPE), desktop)
 	@echo '==> Updating with desktop.'
@@ -116,3 +120,4 @@ ifeq ($(TYPE), desktop)
 endif
 	@echo '=> Done.'
 	@echo ''
+

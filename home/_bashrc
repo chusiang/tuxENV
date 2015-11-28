@@ -135,7 +135,10 @@ fi
 if [ -f /usr/local/share/autojump/autojump.bash ]; then
   . /usr/local/share/autojump/autojump.bash
 fi
-
+#
+# - tab-completion for mosh.
+ssh_complete=$(complete -p ssh)
+eval "$ssh_complete mosh"
 
 # == Color Man Pages ==
 
