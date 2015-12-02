@@ -91,3 +91,7 @@ alias irc='rxvt -name IRC -e irss'
 # - ramdisk
 alias chromium='chromium --disk-cache-dir=/dev/shm/Cache/Chromium'
 #alias co="cd $OLDPWD" <---- 'cd -'
+
+# - Virtualenv
+alias activate_env="source .venv/bin/activate"
+
