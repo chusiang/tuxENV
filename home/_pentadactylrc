@@ -109,7 +109,7 @@ map -modes=n <A-d> <C-S-i>
 "
 "  - Trigger 'Group Tabs'.
 map -modes=n <A-e> <C-S-e>
-map -modes=n <M-e> <M-S-e>
+map -modes=n <M-e> <M-C-e>
 "
 "  - Open Firebug UI.
 map -modes=n <A-f> <F12>
