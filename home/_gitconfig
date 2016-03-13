@@ -7,9 +7,9 @@
 # =========================================================== 
 
 # - Account
-[user]
-	name = chusiang
-	email = chusiang.lai@gmail.com
+#[user]
+#	name = chusiang
+#	email = chusiang.lai@gmail.com
 
 # - Color my git.
 [color]
@@ -29,6 +29,7 @@
 # Alias and Abbreveviation.
 [alias]
 	co   = checkout
+	cd   = checkout develop
 	cm   = commit
 	recm = commit --amend
 	df   = diff
