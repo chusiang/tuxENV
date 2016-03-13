@@ -47,6 +47,7 @@ alias lt='tree'
 
 alias grep='grep $LS_OPTIONS'
 alias egrep='egrep $LS_OPTIONS'
+alias ag='ack-grep'
 
 # Editor
 # =======
