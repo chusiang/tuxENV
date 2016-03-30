@@ -21,6 +21,7 @@ autocmd LocationChange docs\.google\.com/(document|present|spreadsheet) -js mode
 "autocmd LocationChange mail\.yahoo\.com/ -js modes.set(modes.PASS_THROUGH)
 "autocmd LocationChange github\.com/ -js modes.set(modes.PASS_THROUGH)
 "autocmd LocationChange bitbucket\.org/ -js modes.set(modes.PASS_THROUGH)
+autocmd LocationChange quip\.com/ -js modes.set(modes.PASS_THROUGH)
 
 " # GUI
 "
@@ -49,6 +50,8 @@ set hintkeys=asdfghjkl;
 "
 "  - Highlight {group} with [css]. [css] is one or more semicolon-separated CSS declarations (E.g. color: blue; background-color: red).)]]}
 hi Hint font:bold 16px monospace !important; margin:-.2ex; padding: 0 0 0 1px; outline:1px solid rgba(0, 0, 0, .5); background:rgba(255, 248, 231, .8); color:black; text-transform:uppercase;
+"
+" 自訂狀態列樣式。
 highlight StatusLineNormal color: #999999 ; background: #090909 !important; font-size: 12pt; font-family: monospace; font-weight: 600; padding: 0px 3px;
 
 " # Keymap
@@ -69,11 +72,19 @@ map -modes=n <M-,> :preferences<Return>
 "  - Close Tab.
 "map -modes=n d :quit<cr>
 "
+"  - Move Tab in focus.
+"   - '<<': Move Tab in focus Left.
+"map -modes=n <lt><lt> <C-S-PageUp>
+"   - '>>': Move Tab in focus Right.
+"map -modes=n <gt><gt> <C-S-PageDown>
+"
 "  - support HHKB layout.
-map -modes=i,c <C-h> <left>
+"map -modes=i,c <C-h> <left>
+map -modes=i,c <C-b> <left>
 map -modes=i,c <C-j> <down>
 map -modes=i,c <C-k> <up>
 map -modes=i,c <C-l> <right>
+map -modes=i,c <C-f> <right>
 map -modes=i,n,c <S-ESC> ~
 "
 "   - for mapping ctrl + h, j, k, l with /usr/share/X11/xkb/symbols/us [1].
@@ -105,7 +116,7 @@ map -modes=n <ESC>b -builtin <M-S-b>
 "
 "  - Enabled 'Inspect' of Web Developer plugin..
 map -modes=n <A-d> <C-S-i>
-"map -modes=n <A-c> <C-S-c>
+map -modes=n <A-c> <C-S-c>
 "
 "  - Trigger 'Group Tabs'.
 map -modes=n <A-e> <C-S-e>
@@ -192,7 +203,7 @@ iabbreviate vimp Vimperator
 js <<EOM
 switch (services.runtime.OS) {
   case "Darwin": 
-    options.editor = '/Users/jonny/bin/mvim -f +<line> +"sil! call cursor(0, <column>)" <file>';
+    options.editor = '/usr/local/bin/mvim -f +<line> +"sil! call cursor(0, <column>)" <file>';
     break;
   case "Linux":
     options.editor = 'gvim -f +<line> +"sil! call cursor(0, <column>)" <file>';
