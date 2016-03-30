@@ -53,3 +53,7 @@ Other
 - _AwOkenrc - AwOken Icon theme.
 - .xinitrc - EvilWM
 
+## Reference
+
+* [Keyboard shortcuts | Firefox Help](https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly)]
+
