@@ -137,8 +137,10 @@ if [ -f /usr/local/share/autojump/autojump.bash ]; then
 fi
 #
 # - tab-completion for mosh.
-ssh_complete=$(complete -p ssh)
-eval "$ssh_complete mosh"
+if [ "$(uname)" == "Darwin" ]; then
+  ssh_complete=$(complete -p ssh)
+  eval "$ssh_complete mosh"
+fi
 
 # == Color Man Pages ==
 
@@ -165,10 +167,10 @@ set -o vi
 set prompt = "%{\ek\e\\%}%% "
 
 # - show message with notification-daemon.
-msg() {
-	eval $* && notify-send "Shell Information" "「$*」has done." -i 'dialog-apply1' -t '2000' \
-	|| notify-send "Shell Information" "「$*」has Failed." -i 'application-exit1' -t '2000'
-}
+#msg() {
+#	eval $* && notify-send "Shell Information" "「$*」has done." -i 'dialog-apply1' -t '2000' \
+#	|| notify-send "Shell Information" "「$*」has Failed." -i 'application-exit1' -t '2000'
+#}
 
 
 # ------------------------------------
