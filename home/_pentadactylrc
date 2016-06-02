@@ -26,7 +26,7 @@ autocmd LocationChange quip\.com/ -js modes.set(modes.PASS_THROUGH)
 " # GUI
 "
 "  - Default show GUI elements of 'Bookmarks Toobar', 'Tab number over image' and 'Status bar'.
-set guioptions=BNs
+set guioptions=Bns
 
 "  - Disable Alt key to toggle hidden Menu bar for Debian, Ubuntu.
 set guioptions-=m
@@ -38,7 +38,10 @@ set! ui.key.menuAccessKeyFocuses=false
 set maxitems=6
 "
 "  - Items which are completed at the :open prompts. 
-set complete=b
+"
+"   - bookmark,history,file,location
+"
+set complete=bookmark
 "
 "  - Highlight previous find pattern matches.
 set hlfind
@@ -119,7 +122,7 @@ map -modes=n <A-d> <C-S-i>
 map -modes=n <A-c> <C-S-c>
 "
 "  - Trigger 'Group Tabs'.
-map -modes=n <A-e> <C-v><C-e>
+map -modes=n <A-e> <C-S-e>
 map -modes=n <M-e> <M-C-e>
 "
 "  - Open Firebug UI.
@@ -187,16 +190,13 @@ map -modes=n <ESC>h :hs!
 cabbreviate dl downloads
 cabbreviate wi !whois
 cabbreviate tr !traceroute
-iabbreviate apti aptitude
-iabbreviate app application
-iabbreviate cano Canonical
-iabbreviate fx Firefox 
-iabbreviate lin Linux
-iabbreviate ms Microsoft
-iabbreviate pent Pentadactyl
-iabbreviate tp ThinkPad
-iabbreviate ubu Ubuntu
-iabbreviate vimp Vimperator
+iabbreviate ci,s Continuous integration
+iabbreviate env,s Environment
+iabbreviate infra,s Infrastructure
+iabbreviate ms,s Microsoft
+iabbreviate pent,s Pentadactyl
+iabbreviate repo,s repository
+iabbreviate vimp,s Vimperator
 
 " # Editor
 "
