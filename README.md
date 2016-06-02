@@ -2,7 +2,6 @@
 
 - Author: [Chu-Siang Lai (凍仁翔)](http://note.drx.tw/)
 - Build Date: 2013/02/07
-- Version: 1.1
 
 If you like Vim, you can see my [vimrc](https://github.com/chusiang/vimrc).
 
@@ -27,33 +26,50 @@ Backup
 
 ## Files List
 
-bash
-- _bash_aliases
-- _bash_export
-- _bash_profile
-- _bashrc
+bash:
 
-Vim-like
-- _muttatorrc
-- _pentadactylrc
-- _screenrc
+```
+_bash_aliases
+_bash_export
+_bash_profile
+_bashrc
+```
 
-rxvt-unicode
-- _Xdefaults
-- _urxvt/ext/fullscreen
-- _icon/128x128terminal.png
+Vim like:
 
-xinput
-- .xinput.d/
- - marble-scrolling.sh
- - trackpoint-scrolling.sh
- - wheel-scrolling.sh
+```
+_bashrc         # Bash
+_muttatorrc     # Thunderbird
+_pentadactylrc  # Firefox
+_screenrc       # Screen
+_tmux.conf      # Tmux
+```
 
-Other
-- _AwOkenrc - AwOken Icon theme.
-- .xinitrc - EvilWM
+rxvt-unicode:
+
+```
+_Xdefaults
+_urxvt/ext/fullscreen
+_icon/128x128terminal.png
+```
+
+xinput:
+
+```
+_xinput.d/
+├── marble-scrolling.sh     # Scrolling for Marble Trackball.
+├── trackpoint-scrolling.sh # Scrolling for Trackpoint.
+└── wheel-scrolling.sh      # Scrolling for Wheel Trackball.
+```
+
+Other:
+
+```
+_AwOkenrc        # AwOken Icon theme.
+_xinitrc.evilwm  # EvilWM
+```
 
 ## Reference
 
-* [Keyboard shortcuts | Firefox Help](https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly)]
+* [Keyboard shortcuts | Firefox Help](https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly)
 
