@@ -11,9 +11,8 @@
 
 # Color
 # ======
-#
+
 # color the files of directory, zip, execute ... etc.
-#
 if [ "$(uname)" == "Darwin" ]; then
   # Set CLICOLOR if you want Ansi Colors in iTerm2 
   export CLICOLOR=1
@@ -28,9 +27,23 @@ if [ -f /usr/bin/colordiff ]; then
   alias diff="colordiff"
 fi
 
+# Docker
+# =======
+
+alias dalias='alias | grep docker | sed "s/alias\ //"'
+alias dei='docker execute -it'
+alias di='docker images'
+alias dpa='docker ps -a'
+alias dps='docker ps'
+alias drd='docker run -d'
+alias dri='docker run -it'
+alias drm='docker rm $(docker ps -a -q)'
+alias drmf='docker rm -f $(docker ps -a -q)'
+
+
 # File Manager
 # =============
-#
+
 alias cd.='cd ..'
 alias cd..='cd ../..'
 alias cd...='cd ../../..'
@@ -49,11 +62,17 @@ alias grep='grep $LS_OPTIONS'
 alias egrep='egrep $LS_OPTIONS'
 alias ag='ack-grep'
 
-# Editor
+# screen & tmux
+# ===============
+
+alias screen='screen -RD'
+alias tmux="TERM=screen-256color-bce tmux"
+alias tmux0="TERM=screen-256color-bce tmux a -t 0"
+alias tmux1="TERM=screen-256color-bce tmux a -t 1"
+
+# Vim
 # =======
-#
-alias vr='vim -R'
-alias vd='vimdiff'
+
 alias gvir='gvim --remote-tab'
 alias gvis='gvim --remote +split'
 
@@ -62,37 +81,34 @@ if [ "$(uname)" == "Darwin" ]; then
   alias gvim='mvim'
 fi
 
+# Virtualenv
+# ===========
 
-# system
+alias activate_env="source .venv/bin/activate"
+
+# Other
 # =======
 #
-# - Fool-proofing 
 alias ifconfig='/sbin/ifconfig'
-alias reboot='/sbin/shutdown -r now'
-alias pdf='atril'
-
-# - Themes
 alias mocp='mocp -T moca_theme'
+alias pdf='atril'
+alias reboot='/sbin/shutdown -r now'
 alias sm='sm --background=#000 --foreground=#ff0000'
 
-# - ssh
+# cal
+if [ "$(uname)" == "Darwin" ]; then
+  alias cal='gcal'
+  alias aptitude='brew'
+fi
+
+# ssh
 #alias gsh='ssh -t guest-xp ssh'
-alias msh='mosh'
 
-# - screen and tmux
-alias screen='screen -RD'
-alias tmux="TERM=screen-256color-bce tmux"
-alias tmux0="TERM=screen-256color-bce tmux a -t 0"
-alias tmux1="TERM=screen-256color-bce tmux a -t 1"
-
-# - rxvt
-alias rxvt='rxvt-unicode'
-alias irc='rxvt -name IRC -e irss'
-
-# - ramdisk
+# ramdisk
 alias chromium='chromium --disk-cache-dir=/dev/shm/Cache/Chromium'
 #alias co="cd $OLDPWD" <---- 'cd -'
 
-# - Virtualenv
-alias activate_env="source .venv/bin/activate"
+# rxvt
+alias rxvt='rxvt-unicode'
+alias irc='rxvt -name IRC -e irss'
 
