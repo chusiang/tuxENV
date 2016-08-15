@@ -73,6 +73,7 @@ alias tmux1="TERM=screen-256color-bce tmux a -t 1"
 # Vim
 # =======
 
+alias vi='vim'
 alias gvir='gvim --remote-tab'
 alias gvis='gvim --remote +split'
 
@@ -103,6 +104,11 @@ fi
 
 # ssh
 #alias gsh='ssh -t guest-xp ssh'
+
+# sdcv
+if [ "$(uname)" == "Darwin" ]; then
+  alias sdcv='sdcv --utf8-output'
+fi
 
 # ramdisk
 alias chromium='chromium --disk-cache-dir=/dev/shm/Cache/Chromium'
