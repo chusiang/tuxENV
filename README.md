@@ -9,20 +9,25 @@ If you like Vim, you can see my [vimrc](https://github.com/chusiang/vimrc).
 
 Clone tuxENV.
 	
-	git clone git@github.com:chusiang/tuxENV.git
-	cd tuxENV/
+	$ git clone git@github.com:chusiang/tuxENV.git
+	$ cd tuxENV/
 
 Install
 
-	make install
+	$ make install
+	
+	# install tmux plugins.
+	$ tmux
+    → <Ctrl> + A + I
+	
 
 Update
 
-	make update
+	$ make update
 	
 Backup
 
-	make backup
+	$ make backup
 
 ## Files List
 
@@ -72,4 +77,5 @@ _xinitrc.evilwm  # EvilWM
 ## Reference
 
 * [Keyboard shortcuts | Firefox Help](https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly)
+* [SammyLin/tmux-config | GitHub](https://github.com/SammyLin/tmux-config)
 

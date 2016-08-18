@@ -8,6 +8,7 @@ TIMESTAMP=`date "+%Y-%m-%d-%H:%M:%S"`
 
 DIR_BIN=${HOME}/bin
 DIR_VCS=${HOME}/vcs
+DIR_TMUX=${HOME}/.tmux
 
 # - Bash
 FILE_BASHRC=${HOME}/.bashrc
@@ -34,8 +35,12 @@ FILE_ICONS=${HOME}/.icons
 FILE_URXVT=${HOME}/.urxvt
 FILE_URXVTRC=${HOME}/.Xdefaults
 
+# tmux
+FILE_TMUXRC=${HOME}/.tmux.conf
+DIR_TMUX=${HOME}/.tmux
 
-.PHONY: backup install update 
+
+.PHONY: backup install update clean_tmux
 
 all: backup install
 
@@ -54,6 +59,9 @@ backup:
 	mv ${FILE_EDIT_MODE} ${DIR_BAK}/
 	mv ${FILE_GITCONFIG} ${DIR_BAK}/
 	mv ${FILE_MYCLIRC} ${DIR_BAK}/
+	# tmux
+	mv ${FILE_TMUXRC} ${DIR_BAK}/
+	mv ${DIR_TMUX} ${DIR_BAK}/
 ifeq ($(TYPE), desktop)
 	mv ${FILE_AWOKENRC} ${DIR_BAK}/
 	mv ${FILE_EVILWMRC} ${DIR_BAK}/
@@ -77,6 +85,9 @@ install:
 	cat home/_gitconfig > ${FILE_GITCONFIG}
 	cat home/_myclirc > ${FILE_MYCLIRC}
 	cp -a home/bin/ ${DIR_BIN} 
+	mkdir ${DIR_TMUX} 
+	cat home/_tmux.conf > ${FILE_TMUXRC}
+	git clone https://github.com/tmux-plugins/tpm ${DIR_TMUX}/plugins/tpm
 ifeq ($(TYPE), desktop)
 	@echo '==> Install with desktop.'
 	cat home/_fonts.conf > ${FILE_FONTSRC}
@@ -121,3 +132,9 @@ endif
 	@echo '=> Done.'
 	@echo ''
 
+clean_tmux:
+	@echo "--Starting cleaning tmux' file...--"
+	rm -f ${FILE_TMUXRC}
+	rm -rf ${DIR_TMUX}
+	@echo '--Done!--'
+	@echo
