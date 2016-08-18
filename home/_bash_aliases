@@ -2,9 +2,8 @@
 #  Author: 凍仁翔 / chusiang.lai (at) gmail.com
 #  Blog: http://note.drx.tw
 #  Filename: _bash_aliases
-#  Modified: 2015-01-12 09:45
+#  Modified: 2016-08-19 03:9
 #  Description: alias config for bashrc.
-#  Reference: 
 # =========================================================== 
 
 #!/bin/bash
@@ -60,7 +59,9 @@ alias lt='tree'
 
 alias grep='grep $LS_OPTIONS'
 alias egrep='egrep $LS_OPTIONS'
-alias ag='ack-grep'
+if [ "$(uname)" != "Darwin" ]; then
+  alias ag='ack-grep'
+fi
 
 # screen & tmux
 # ===============
@@ -69,6 +70,7 @@ alias screen='screen -RD'
 alias tmux="TERM=screen-256color-bce tmux"
 alias tmux0="TERM=screen-256color-bce tmux a -t 0"
 alias tmux1="TERM=screen-256color-bce tmux a -t 1"
+alias tmux2="TERM=screen-256color-bce tmux a -t 2"
 
 # Vim
 # =======
@@ -111,7 +113,7 @@ if [ "$(uname)" == "Darwin" ]; then
 fi
 
 # ramdisk
-alias chromium='chromium --disk-cache-dir=/dev/shm/Cache/Chromium'
+#alias chromium='chromium --disk-cache-dir=/dev/shm/Cache/Chromium'
 #alias co="cd $OLDPWD" <---- 'cd -'
 
 # rxvt
