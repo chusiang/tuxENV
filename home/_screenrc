@@ -110,9 +110,10 @@ defnonblock 5
 
 ### custom by ChuSiang ###
 # Add status bar.
-caption always "%{=u .r} %-w%<%{=ub .Y}%n %t%{=u .r}%+w "
-hardstatus alwaysignore
-hardstatus alwayslastline "%{= .K} [%l]%<%=%{= .Y}$USER%{= .R}@%H %=%{= .m} %Y/%m/%d%{= .M} %0c "
+caption always "%{=u .r}%-w%<%{=ub .Y}'%n %t'%{=u .r}%+w "
+# hardstatus alwaysignore
+hardstatus alwayslastline 
+hardstatus string "%{= .R}%H %=%{= .w}< %{= .g}%l %{= .w}< %{= .m}%m/%d%{= .M} %0c"
 
 # Set default encoding using utf8
 defutf8 on
@@ -156,8 +157,8 @@ bindkey "^[0" select 10
 bindkey "^[-" select 11
 bindkey "^[=" select 12
 
-bindkey "^[o" split			# Alt + o : Horizontally Split the current screen. (C-a S) 
-bindkey "^[e" split	-v		# Alt + v : Vertically Split the current screen. (C-a |) 
+#bindkey "^[o" split			# Alt + o : Horizontally Split the current screen. (C-a S) 
+#bindkey "^[e" split	-v		# Alt + v : Vertically Split the current screen. (C-a |) 
 bindkey "^[q" remove		# Alt + q : Delete current screen window. (C-a X)
 bindkey "^[w" focus			# Alt + w : Switch the input focus to the next region. (C-a tab)
 
@@ -184,9 +185,9 @@ bindkey -k k6 focus			# F6 : Switch the input focus to the next region. (C-a tab
 # screen -t mail 8 mutt
 # screen -t daemon 9 tail -f /var/log/daemon.log
 #screen -t GTD	vim
-screen -t HTOP	htop
+#screen -t HTOP	htop
 #screen -t IM	finch
 #screen -t IRC	irssi
-screen -t W3M	w3m -B
+#screen -t W3M	w3m -B
 #screen -t MOC mocp -T moca_theme
-screen -t VCS
+#screen -t VCS
