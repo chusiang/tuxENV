@@ -98,10 +98,11 @@ alias pdf='atril'
 alias reboot='/sbin/shutdown -r now'
 alias sm='sm --background=#000 --foreground=#ff0000'
 
-# cal
+# macOS
 if [ "$(uname)" == "Darwin" ]; then
   alias cal='gcal'
   alias aptitude='brew'
+  alias xclip='pbcopy'
 fi
 
 # ssh
