@@ -1,6 +1,10 @@
-# ~/.bashrc: executed by bash(1) for non-login shells.
-# see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
-# for examples
+# ============================================================
+#  Author: chusiang / chusiang (at) drx.tw
+#  Blog: http://note.drx.tw
+#  Filename: _bashrc
+#  Modified: 2016-10-06 18:50
+#  Description: see /usr/share/doc/bash/examples/startup-files (in the package bash-doc)
+# =========================================================== 
 
 # == Colors ==
 
@@ -173,8 +177,12 @@ set prompt = "%{\ek\e\\%}%% "
 #}
 
 
-# ------------------------------------
-# Author : Chu-Siang Lai
-# E-mail : jonny (at) drx.tw
-# Blog: http://note.drx.tw
-# ------------------------------------
+# == PS1 ==
+
+ps1w () {
+  PS1='\[\033[0;37m\][ \[\033[1;33m\]\u\[\033[1;31m\]@\h \[\033[1;35m\]\w \[\033[0;37m\]] \[\033[0;34m\]$(parse_git_branch)\[\033[0;37m\]- \A \n\[\033[1;37m\]$ \[\033[0m\]'
+}
+
+ps1W () {
+  PS1='\[\033[0;37m\][ \[\033[1;33m\]\u\[\033[1;31m\]@\h \[\033[1;35m\]\W \[\033[0;37m\]] \[\033[0;34m\]$(parse_git_branch)\[\033[0;37m\]- \A \n\[\033[1;37m\]$ \[\033[0m\]'
+}
