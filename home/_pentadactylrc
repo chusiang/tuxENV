@@ -22,6 +22,7 @@ autocmd LocationChange docs\.google\.com/(document|present|spreadsheet) -js mode
 "autocmd LocationChange github\.com/ -js modes.set(modes.PASS_THROUGH)
 "autocmd LocationChange bitbucket\.org/ -js modes.set(modes.PASS_THROUGH)
 autocmd LocationChange quip\.com/ -js modes.set(modes.PASS_THROUGH)
+autocmd LocationChange cloudcraft\.co -js modes.set(modes.PASS_THROUGH)
 
 " # GUI
 "
@@ -78,8 +79,12 @@ map -modes=n <M-,> :preferences<Return>
 "  - Move Tab in focus.
 "   - '<<': Move Tab in focus Left.
 "map -modes=n <lt><lt> <C-S-PageUp>
+map -modes=n <M-h> <C-S-PageUp>
+map -modes=n <A-h> <C-S-PageUp>
 "   - '>>': Move Tab in focus Right.
 "map -modes=n <gt><gt> <C-S-PageDown>
+map -modes=n <M-l> <C-S-PageDown>
+map -modes=n <A-l> <C-S-PageDown>
 "
 "  - support HHKB layout.
 "map -modes=i,c <C-h> <left>
