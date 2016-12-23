@@ -1,8 +1,8 @@
 # ============================================================
-#  Author: 凍仁翔 / chusiang.lai (at) gmail.com
+#  Author: Chu-Siang Lai / chusiang (at) drx.tw
 #  Blog: http://note.drx.tw
 #  Filename: _gitconfig
-#  Modified: 2015-05-11 06:50
+#  Modified: 2016-12-23 11:15
 #  Description: config for git.
 # =========================================================== 
 
@@ -20,15 +20,16 @@
 	ui = auto
 
 # Diff with vimdiff.
-[diff]
-    external = git_diff_wrapper
-
-[pager]
-    diff = 
+#[diff]
+#    external = git_diff_wrapper
+#
+#[pager]
+#    diff =
 
 # Alias and Abbreveviation.
 [alias]
 	co   = checkout
+	ca   = checkout master
 	cd   = checkout develop
 	cm   = commit
 	recm = commit --amend
@@ -40,7 +41,8 @@
 	lg   = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	lo   = log --color --pretty=format:'%Cred%h%Creset %s' --abbrev-commit 
 	#ls = log --color --pretty=oneline --pretty=format:'%Cred' --abbrev-commit 
-	me   = merge --no-ff
+	me   = merge
+	md   = merge --no-ff develop
 	mg   = merge --no-ff
 	re2Front = reset --soft HEAD^
 
