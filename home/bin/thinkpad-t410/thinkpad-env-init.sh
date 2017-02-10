@@ -40,11 +40,14 @@ if [ $TP_USB_KB_COUNT -eq "2" ]; then
 fi
 
 # = swap Caps Lock and left Ctrl =
-HHKB_COUNT=`lsusb | grep "Topre Corporation HHKB Professional" | wc -l`
 
-if [ $HHKB_COUNT -ne "1" ]; then
-	/usr/bin/setxkbmap -option "ctrl:swapcaps"
-fi
+#HHKB_COUNT=`lsusb | grep "Topre Corporation HHKB Professional" | wc -l`
+#if [ $HHKB_COUNT -ne "1" ]; then
+#	/usr/bin/setxkbmap -option "ctrl:swapcaps"
+#fi
+
+# Only switch the Caps Lock and Left Ctrl layout at ThinkPad T410.
+/usr/bin/setxkbmap -option "ctrl:swapcaps" -device 13
 
 #STATUS="'ThinkPad Initialization' ''"
 #echo "notify-send -t 2000 -i mouse $STATUS" | bash
