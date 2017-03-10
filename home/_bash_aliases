@@ -110,7 +110,7 @@ fi
 
 # sdcv
 if [ "$(uname)" == "Darwin" ]; then
-  alias sdcv='sdcv --utf8-output'
+  alias sdcv='sdcv --utf8-input --utf8-output'
 fi
 
 # ramdisk
