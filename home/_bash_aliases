@@ -63,7 +63,7 @@ if [ "$(uname)" != "Darwin" ]; then
   alias ag='ack-grep'
 fi
 
-# screen & tmux
+# screen & tmux & tmate
 # ===============
 
 alias screen='screen -RD'
@@ -71,6 +71,8 @@ alias tmux="TERM=screen-256color-bce tmux"
 alias tmux0="TERM=screen-256color-bce tmux a -t 0"
 alias tmux1="TERM=screen-256color-bce tmux a -t 1"
 alias tmux2="TERM=screen-256color-bce tmux a -t 2"
+alias tmate.token="tmate display -p '#{tmate_ssh}'"
+alias tmate.token.ro="tmate display -p '#{tmate_ssh}'"
 
 # Vim
 # =======
