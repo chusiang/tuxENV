@@ -79,3 +79,6 @@ _xinitrc.evilwm  # EvilWM
 * [Keyboard shortcuts | Firefox Help](https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly)
 * [SammyLin/tmux-config | GitHub](https://github.com/SammyLin/tmux-config)
 
+## License
+
+Copyright (c) chusiang from 2011 under the MIT license.
