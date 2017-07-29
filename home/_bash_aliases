@@ -38,7 +38,7 @@ alias drd='docker run -d'
 alias dri='docker run -it'
 alias drm='docker rm $(docker ps -a -q)'
 alias drmf='docker rm -f $(docker ps -a -q)'
-
+alias drmi="docker rmi $(docker images | grep none | awk '{ print $3 }')"
 
 # File Manager
 # =============
