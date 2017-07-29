@@ -53,3 +53,8 @@ If you like Vim, you can see my [vimrc](https://github.com/chusiang/vimrc), and 
 * [Keyboard shortcuts | Firefox Help](https://support.mozilla.org/en-US/kb/keyboard-shortcuts-perform-firefox-tasks-quickly)
 * [SammyLin/tmux-config | GitHub](https://github.com/SammyLin/tmux-config)
 * [chusiang/hacking-ubuntu.ansible | GitHub](https://github.com/chusiang/hacking-ubuntu.ansible)
+
+## License
+
+Copyright (c) chusiang from 2011 under the MIT license.
+
