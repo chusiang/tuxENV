@@ -41,10 +41,12 @@
 	lg   = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
 	lo   = log --color --pretty=format:'%Cred%h%Creset %s' --abbrev-commit 
 	#ls = log --color --pretty=oneline --pretty=format:'%Cred' --abbrev-commit 
-	me   = merge
+	mf   = merge --no-ff
 	md   = merge --no-ff develop
-	mg   = merge --no-ff
+	mg   = merge
 	re2Front = reset --soft HEAD^
+  ta   = tag -l
+  tl   = tag -l
 
 [push]
 	default = simple
