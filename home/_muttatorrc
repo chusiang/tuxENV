@@ -2,23 +2,23 @@
 
 " keymap
 
-# - quick load muttator config.
+" - quick load muttator config.
 map ,s :source! ~/.muttatorrc<Return>
 
-# - Go to ...
+" - Go to ...
 map <C-g> :goto 
 
-# - Archive.
+" - Archive.
 map e <C-s>
 
-# - Move mail to ...
+" - Move mail to ...
 map l :moveto 
 
 " gui
 map <F7> :set gui=all<Return>
 map <F9> :set gui=mail,notabs,nostatus,nofolderlist<Return>
 
-# - setting default layout.
+" - setting default layout.
 set layout=wide
 
 source! /Users/jonny/.muttatorrc.local
