@@ -11,6 +11,9 @@
 #	name = chusiang
 #	email = chusiang.lai@gmail.com
 
+[format]
+  signoff = true
+
 # - Color my git.
 [color]
 	branch = auto
@@ -50,3 +53,4 @@
 
 [push]
 	default = simple
+
