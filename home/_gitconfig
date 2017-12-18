@@ -54,3 +54,17 @@
 [push]
 	default = simple
 
+#[commit]
+#	gpgsign = true
+
+[format]
+  signoff = true
+
+# Use the git pull of rebase mode, and reserve the merge commit.
+[pull]
+  rebase = preserve
+
+# Enable the auto stash mode on git rebase, like `git pull --autostash`.
+[rebase]
+  autoStash = true
+
