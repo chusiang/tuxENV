@@ -21,6 +21,10 @@ if [ -d "$HOME/bin" ] ; then
   PATH="$HOME/bin:$PATH"
 fi
 
+if [ -d "$HOME/.local/vim/bin/" ] ; then
+  PATH="$HOME/.local/vim/bin/:$PATH"
+fi
+
 # set tmuxifier bin path.
 if [ -d "$HOME/.tmuxifier/bin" ] ; then
 	PATH="$PATH:~/.tmuxifier/bin"
