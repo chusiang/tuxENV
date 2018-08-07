@@ -1,15 +1,18 @@
-# ============================================================
+# ==============================================================================
 #  Author: Chu-Siang Lai / chusiang (at) drx.tw
 #  Blog: http://note.drx.tw
 #  Filename: _gitconfig
-#  Modified: 2016-12-23 11:15
+#  Modified: 2018-08-07 12:13
 #  Description: config for git.
-# =========================================================== 
+# ==============================================================================
 
 # - Account
 #[user]
 #	name = chusiang
 #	email = chusiang.lai@gmail.com
+
+#[commit]
+#	gpgsign = true
 
 [format]
   signoff = true
@@ -29,6 +32,20 @@
 #[pager]
 #    diff =
 
+[fetch]
+  prune = true
+
+[push]
+	default = simple
+
+# Use the git pull of rebase mode, and reserve the merge commit.
+[pull]
+  rebase = preserve
+
+# Enable the auto stash mode on git rebase, like `git pull --autostash`.
+[rebase]
+  autoStash = true
+
 # Alias and Abbreveviation.
 [alias]
 	co   = checkout
@@ -42,29 +59,11 @@
 	br   = branch
 	re   = remote
 	lg   = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	lo   = log --color --pretty=format:'%Cred%h%Creset %s' --abbrev-commit 
-	#ls = log --color --pretty=oneline --pretty=format:'%Cred' --abbrev-commit 
+	lo   = log --color --pretty=format:'%Cred%h%Creset %s' --abbrev-commit
+	#ls = log --color --pretty=oneline --pretty=format:'%Cred' --abbrev-commit
 	mf   = merge --no-ff
 	md   = merge --no-ff develop
 	mg   = merge
 	re2Front = reset --soft HEAD^
   ta   = tag -l
   tl   = tag -l
-
-[push]
-	default = simple
-
-#[commit]
-#	gpgsign = true
-
-[format]
-  signoff = true
-
-# Use the git pull of rebase mode, and reserve the merge commit.
-[pull]
-  rebase = preserve
-
-# Enable the auto stash mode on git rebase, like `git pull --autostash`.
-[rebase]
-  autoStash = true
-
