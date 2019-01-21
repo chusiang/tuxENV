@@ -1,10 +1,10 @@
-# ============================================================
+# ==============================================================================
 #  Author: 凍仁翔 / chusiang.lai (at) gmail.com
 #  Blog: http://note.drx.tw
 #  Filename: _bash_aliases
-#  Modified: 2016-08-19 03:9
+#  Modified: 2019-01-21 12:13
 #  Description: alias config for bashrc.
-# =========================================================== 
+# ==============================================================================
 
 #!/bin/bash
 
@@ -13,7 +13,7 @@
 
 # color the files of directory, zip, execute ... etc.
 if [ "$(uname)" == "Darwin" ]; then
-  # Set CLICOLOR if you want Ansi Colors in iTerm2 
+  # Set CLICOLOR if you want Ansi Colors in iTerm2.
   export CLICOLOR=1
 else
   eval "`dircolors`"
@@ -85,6 +85,9 @@ alias gvis='gvim --remote +split'
 if [ "$(uname)" == "Darwin" ]; then
   alias gvim='mvim'
 fi
+
+alias :e='vi'
+alias :q='exit'
 
 # Virtualenv
 # ===========
