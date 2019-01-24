@@ -67,3 +67,4 @@
 	re2Front = reset --soft HEAD^
   ta   = tag -l
   tl   = tag -l
+  pf   = push --force-with-lease
