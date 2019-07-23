@@ -19,11 +19,11 @@
 
 # - Color my git.
 [color]
-	branch = auto
-	diff = auto
-	log = auto
-	status = auto
-	ui = auto
+  branch = auto
+  diff = auto
+  log = auto
+  status = auto
+  ui = auto
 
 # Diff with vimdiff.
 #[diff]
@@ -36,11 +36,11 @@
   prune = true
 
 [push]
-	default = simple
+  default = simple
 
 # Use the git pull of rebase mode, and reserve the merge commit.
 [pull]
-  rebase = preserve
+  rebase = true
 
 # Enable the auto stash mode on git rebase, like `git pull --autostash`.
 [rebase]
@@ -48,23 +48,23 @@
 
 # Alias and Abbreveviation.
 [alias]
-	co   = checkout
-	ca   = checkout master
-	cd   = checkout develop
-	cm   = commit
-	recm = commit --amend
-	df   = diff
-	dfn  = diff --name-only
-	st   = status
-	br   = branch
-	re   = remote
-	lg   = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
-	lo   = log --color --pretty=format:'%Cred%h%Creset %s' --abbrev-commit
-	#ls = log --color --pretty=oneline --pretty=format:'%Cred' --abbrev-commit
-	mf   = merge --no-ff
-	md   = merge --no-ff develop
-	mg   = merge
-	re2Front = reset --soft HEAD^
+  co   = checkout
+  ca   = checkout master
+  cd   = checkout develop
+  cm   = commit
+  recm = commit --amend
+  df   = diff
+  dfn  = diff --name-only
+  st   = status
+  br   = branch
+  re   = remote
+  lg   = log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit
+  lo   = log --color --pretty=format:'%Cred%h%Creset %s' --abbrev-commit
+  #ls = log --color --pretty=oneline --pretty=format:'%Cred' --abbrev-commit
+  mf   = merge --no-ff
+  md   = merge --no-ff develop
+  mg   = merge
+  re2Front = reset --soft HEAD^
   ta   = tag -l
   tl   = tag -l
   pf   = push --force-with-lease
