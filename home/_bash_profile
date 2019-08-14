@@ -37,14 +37,19 @@ fi
 
 # Ruby
 if [ -d "$PATH:$HOME/.rvm/bin" ] ; then
-  PATH="$PATH:$HOME/.rvm/bin" 
+  PATH="$PATH:$HOME/.rvm/bin"
 fi
 # Load RVM into a shell session *as a function*
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" 
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm"
 
 # awscli
 if [ -f "/usr/local/bin/aws_completer" ] ; then
   complete -C '/usr/local/bin/aws_completer' aws
+fi
+
+# Z
+if [ -f "/usr/local/etc/profile.d/z.sh" ] ; then
+  . /usr/local/etc/profile.d/z.sh
 fi
 
 # ------------------------------------
