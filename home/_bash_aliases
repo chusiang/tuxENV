@@ -82,9 +82,14 @@ alias gvir='gvim --remote-tab'
 alias gvis='gvim --remote +split'
 
 # Alias the MacVim to GVim.
-if [ "$(uname)" == "Darwin" ]; then
-  alias gvim='mvim'
-fi
+# ------------------------
+#
+# if [ "$(uname)" == "Darwin" ]; then
+#   alias gvim='mvim'
+# fi
+#
+# # I like manual create some soft-link via MacVim.app now.
+# $ ln -fs /Applications/MacVim.app/Contents/bin/gvi* /usr/local/bin/
 
 alias :e='vi'
 alias :q='exit'
