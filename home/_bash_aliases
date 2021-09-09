@@ -111,8 +111,15 @@ alias sm='sm --background=#000 --foreground=#ff0000'
 # macOS
 if [ "$(uname)" == "Darwin" ]; then
   alias cal='gcal'
+  alias apt='brew'
   alias aptitude='brew'
   alias xclip='pbcopy'
+fi
+
+if [ "$(uname)" == "Linux" ]; then
+  alias pbcopy='xclip -selection clipboard'
+  alias pbpaste='xclip -selection clipboard -o'
+  alias brew='apt'
 fi
 
 # ssh
