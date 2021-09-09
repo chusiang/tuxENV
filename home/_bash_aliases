@@ -59,9 +59,6 @@ alias lt='tree'
 
 alias grep='grep $LS_OPTIONS'
 alias egrep='egrep $LS_OPTIONS'
-if [ "$(uname)" != "Darwin" ]; then
-  alias ag='ack-grep'
-fi
 
 # screen & tmux & tmate
 # ===============
