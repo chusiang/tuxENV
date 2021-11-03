@@ -62,7 +62,7 @@
   lo    = log --color --pretty=format:'%Cred%h%Creset %s' --abbrev-commit
   # ls = log --color --pretty=oneline --pretty=format:'%Cred' --abbrev-commit
   mf    = merge --no-ff
-  md    = merge --no-ff develop
+  md    = merge develop
   mg    = merge
   re2Front = reset --soft HEAD^
   ta    = tag -l
