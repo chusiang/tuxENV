@@ -99,39 +99,39 @@ alias activate_env="source .venv/bin/activate"
 # Other
 # =======
 #
+alias bat='batcat'
+alias fd='fdfind'
 alias ifconfig='/sbin/ifconfig'
 alias mocp='mocp -T moca_theme'
 alias pdf='atril'
 alias reboot='/sbin/shutdown -r now'
 alias sm='sm --background=#000 --foreground=#ff0000'
 
-# macOS
-if [ "$(uname)" == "Darwin" ]; then
-  alias cal='gcal'
-  alias apt='brew'
-  alias aptitude='brew'
-  alias xclip='pbcopy'
-fi
+# rxvt
+alias rxvt='rxvt-unicode'
+alias irc='rxvt -name IRC -e irss'
 
+# Linux only.
 if [ "$(uname)" == "Linux" ]; then
   alias pbcopy='xclip -selection clipboard'
   alias pbpaste='xclip -selection clipboard -o'
   alias brew='apt'
 fi
 
-# ssh
-#alias gsh='ssh -t guest-xp ssh'
-
-# sdcv
+# macOS only.
 if [ "$(uname)" == "Darwin" ]; then
+  alias cal='gcal'
+  alias apt='brew'
+  alias aptitude='brew'
+  alias xclip='pbcopy'
+#
+  # sdcv
   alias sdcv='sdcv --utf8-input --utf8-output'
 fi
 
+# ssh
+#alias gsh='ssh -t guest-xp ssh'
+
 # ramdisk
 #alias chromium='chromium --disk-cache-dir=/dev/shm/Cache/Chromium'
-#alias co="cd $OLDPWD" <---- 'cd -'
-
-# rxvt
-alias rxvt='rxvt-unicode'
-alias irc='rxvt -name IRC -e irss'
 
