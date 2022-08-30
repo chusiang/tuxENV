@@ -1,212 +1,203 @@
-# ============================================================
-#  Author: 凍仁翔 / chusiang.lai (at) gmail.com
-#  Blog: http://note.drx.tw
-#  Filename: _Xdefaults
-#  Modified: 2014-12-31 09:42
-#  Description: configure for rxvf-unicode.
-#  Reference:
-#   1. http://www.htmlgoodies.com/tutorials/colors/article.php/3478921
-#   2. https://wiki.archlinux.org/index.php/Rxvt-unicode
-#   3. http://awesome.naquadah.org/wiki/Urxvt_tips
-#   4. http://www.saltycrane.com/blog/2009/11/how-make-urxvt-look-gnome-terminal/
-#   5. https://bbs.archlinux.org/viewtopic.php?id=148147
-# ===========================================================
+! ============================================================
+!  Author: 凍仁翔 / chusiang.lai (at) gmail.com
+!  Blog: http://note.drx.tw
+!  Filename: _Xdefaults
+!  Modified: 2014-12-31 09:42
+!  Description: configure for rxvf-unicode.
+!  Reference:
+!   1. http://www.htmlgoodies.com/tutorials/colors/article.php/3478921
+!   2. https://wiki.archlinux.org/index.php/Rxvt-unicode
+!   3. http://awesome.naquadah.org/wiki/Urxvt_tips
+!   4. http://www.saltycrane.com/blog/2009/11/how-make-urxvt-look-gnome-terminal/
+!   5. https://bbs.archlinux.org/viewtopic.php?id=148147
+! ===========================================================
 
-# General
-# ========
-#
-# - Icon.
-#
+! General
+! ========
+!
+! - Icon.
+!
 URxvt.iconFile: ~/.icons/utilities-terminal-su-icon.png
-#
-# - Font.
-#
-# Xft (X FreeType) with Bitstream, DejaVu, Liberation, or Terminus fonts:
-# Fedora/debian packages: libXft/libxft2
-# An anti-aliased font setup with Xft looks fantastic; it can be a bit choppy
-# on older systems. You can always turn off anti-aliasing (antialias=false) if
-# your terminal is sluggish. Use only ONE of the Xft pairs below:
-#
-# Monaco and LiHei Pro (Chinese).
+!
+! - Font.
+!
+! Xft (X FreeType) with Bitstream, DejaVu, Liberation, or Terminus fonts:
+! Fedora/debian packages: libXft/libxft2
+! An anti-aliased font setup with Xft looks fantastic; it can be a bit choppy
+! on older systems. You can always turn off anti-aliasing (antialias=false) if
+! your terminal is sluggish. Use only ONE of the Xft pairs below:
+!
 URxvt.font:			  xft:Source Code Pro:pixelsize=18:autohint=true
 URxvt.boldFont: 	xft:Source Code Pro:bold:pixelsize=18:autohint=true
 URxvt.italicFont:	xft:Source Code Pro:italic:pixelsize=18:autohint=true
 
-#
-# - Custom default window size.
-#
+!
+! - Custom default window size.
+!
 URxvt.geometry: 80x36
 
-# Color
-# ========
-#
-# - Text/Font color (default is black).
+! Color
+! ========
+!
+! - Text/Font color (default is black).
 URxvt.foreground:  #FFFFFF
-#
-# - Background color (prior to tinting) (default is white).
-URxvt.background:  #000000
-#
-# UnderLine
-#URxvt.underlineColor:   #cc0000
-#
-# - URLs color
+!
+! - Background color (prior to tinting) (default is white).
+! URxvt.background:  #000000
+!
+! UnderLine
+! URxvt.underlineColor:   #cc0000
+!
+! - URLs color
 URxvt.colorUL:  #7f7f7f
-#
-# - Scheme: Ambience
-#
-# Black.
+
+! - Scheme: Ambience --> Tomorrow
+
+! Black.
 URxvt.color0:	  #000000
-# URxvt.color8:	  #AAAAAA
+! URxvt.color8:	  #AAAAAA
 URxvt.color8:	  #2d2d2d
-#
-# Red.
+
+! Red.
 URxvt.color1:	  #cc0000
-# URxvt.color9:	  #ef2929
+! URxvt.color9:	  #ef2929
 URxvt.color9:	  #f2777a
-#
-# Green.
+
+! Green.
 URxvt.color2:	  #4E9A06
-# URxvt.color10:	#8AE234
+! URxvt.color10:	#8AE234
 URxvt.color10:	#99cc99
-#
-# Yellow.
+
+! Yellow.
 URxvt.color3:   #C4A000
-# URxvt.color11:  #FCE94F
+! URxvt.color11:  #FCE94F
 URxvt.color11:  #ffcc66
-#
-# Blue.
+
+! Blue.
 URxvt.color4:   #3465A4
-# URxvt.color12:  #729FCF
+! URxvt.color12:  #729FCF
 URxvt.color12:  #6699cc
-#
-# Magenta.
+
+! Magenta.
 URxvt.color5:	  #75507B
-# URxvt.color13:	#AD7FA8
+! URxvt.color13:	#AD7FA8
 URxvt.color13:	#cc99cc
-#
-# Cyan.
+
+! Cyan.
 URxvt.color6:   #06989A
-# URxvt.color14:  #34E2E2
+! URxvt.color14:  #34E2E2
 URxvt.color14:  #66cccc
-#
-# White.
+
+! White.
 URxvt.color7:   #D3D7CF
-# URxvt.color15:  #EEEEEC
+! URxvt.color15:  #EEEEEC
 URxvt.color15:  #e0e0e0
 
-# Background
-# ========
-#
-# - Transparency.
-#
-#  - real transparency.
-#
-# using the composite manager currently running. (xcompmgr, dcompmgr, compiz...)
+! Background
+! ========
+!
+! - Transparency.
+!
+!  - real transparency.
+!
+! using the composite manager currently running. (xcompmgr, dcompmgr, compiz...)
 URxvt.depth: 32
 URxvt.background: [75]#000000
-#
-#  - fake transparency: true or false (default).
-#
-# that copies the wallpaper to the background of the terminal. (more exactly, the contents of Xorg's root window)
-#URxvt.transparent: true
-#
-#  tint with any color; i.e., blue, red, tomato4, olivedrab2, etc. some nice listings are at [1].
-#URxvt.tintColor: #000000
-#
-#  shading - 0 to 99 darkens, 101 to 200 lightens.
-#  - Don't use with tintColor; just use a darker or lighter color instead.
-#URxvt.shading: 40
+!
+!  - fake transparency: true or false (default).
+!
+! that copies the wallpaper to the background of the terminal. (more exactly, the contents of Xorg root window)
+! URxvt.transparent: true
+!
+!  tint with any color; i.e., blue, red, tomato4, olivedrab2, etc. some nice listings are at [1].
+! URxvt.tintColor: #000000
+!
+!  shading - 0 to 99 darkens, 101 to 200 lightens.
+!  - Do not use with tintColor; just use a darker or lighter color instead.
+! URxvt.shading: 40
 
-# Scrolling
-# ========
-#
-# - Scrollback.
-#
-# scrollback buffer lines - 65535 is max on most machines (64 is default).
+! Scrolling
+! ========
+!
+! - Scrollback.
+!
+! scrollback buffer lines - 65535 is max on most machines (64 is default).
 URxvt.saveLines: 10000
-#
-# - Scrollbar.
-#
-# scrollbar - true (default) or false.
+!
+! - Scrollbar.
+!
+! scrollbar - true (default) or false.
 URxvt.scrollBar: false
-#
-# scrollbar position - left=false (default) or right=true
-#URxvt.scrollBar_right: true
-#
-# scrollbar style - rxvt (default), plain, next, or xterm
-#URxvt.scrollstyle: rxvt
-#
-# quickly search and selection/popups hotkeys - A-s (default).
+!
+! scrollbar position - left=false (default) or right=true
+! URxvt.scrollBar_right: true
+!
+! scrollbar style - rxvt (default), plain, next, or xterm
+! URxvt.scrollstyle: rxvt
+!
+! quickly search and selection/popups hotkeys - A-s (default).
 URxvt.searchable-scrollback: A-f
 
-# Other
-# ========
-#
-# - 256color support for 'rxvt-unicode-256color'. [2]
-#
+! Other
+! ========
+!
+! - 256color support for rxvt-unicode-256color. [2]
+!
 URxvt.loginShell: true
-#
-#  - 256color support on remote-host.
-#
-# ssh remote-host mkdir -p $HOME/.terminfo/r/
-# scp /usr/share/terminfo/r/rxvt-unicode-256color remote-host:$HOME/.terminfo/r/
+!
+!  - 256color support on remote-host.
+!
+! ssh remote-host mkdir -p $HOME/.terminfo/r/
+! scp /usr/share/terminfo/r/rxvt-unicode-256color remote-host:$HOME/.terminfo/r/
 URxvt.termName: rxvt-unicode-256color
-#
-# - For screen/tmux. (\001 is C-a.)
-#
+!
+! - For screen/tmux. (\001 is C-a.)
+!
 URxvt.keysym.M-Left:  \001p
 URxvt.keysym.M-Right: \001n
 URxvt.secondaryScroll: true
-#
-# - IRC [3]
-#
-# Bell, Beep
+!
+! - IRC [3]
+!
+! Bell, Beep
 URxvt.visualBell:	true
 URxvt.urgentOnBell: true
-#
-# setting for 'rxvt -name IRC'.
+
 IRC.title:          IRC
 IRC.geometry:		80x12+535+542
 IRC.saveLines:		500
 IRC.mapAlert:		true
-#
-# - Clickable URLs in Firefox [4]
-#
-URxvt.perl-ext-common: default,matcher
-URxvt.urlLauncher:     x-www-browser
-#URxvt.urlLauncher: iceweasel
-URxvt.matcher.button:  1
-# Since rxvt-unicode 9.14, it's also possible to use matcher to open and list recent (currently limited to 10) URLs via keyboard:
-#URxvt.keysym.C-Delete:  perl:matcher:last
-#URxvt.keysym.M-Delete:  perl:matcher:list
-#
-# - Fullscreen switch [5]
-#
-URxvt.perl-ext-common: fullscreen
-URxvt.keysym.F11:  perl:fullscreen:switch
+!
+! - Clickable URLs in Firefox [4]
+!
+! URxvt.perl-ext-common: default,matcher
+! URxvt.urlLauncher:     x-www-browser
+! URxvt.urlLauncher: iceweasel
+! URxvt.matcher.button:  1
+! Since rxvt-unicode 9.14, it is also possible to use matcher to open and list recent (currently limited to 10) URLs via keyboard:
+! URxvt.keysym.C-Delete:  perl:matcher:last
+! URxvt.keysym.M-Delete:  perl:matcher:list
+!
+! - Fullscreen switch [5]
+!
+! URxvt.perl-ext-common: fullscreen
+! URxvt.keysym.F11:  perl:fullscreen:switch
 
-#
-# - urxvt-perls
-#
-URxvt.perl-lib:        ~/.urxvt/ext/urxvt-perls/
-URxvt.perl-ext-common: default,selection-autotransform,matcher
+!
+! - urxvt-perls
+!
+! URxvt.perl-lib:        ~/.urxvt/ext/urxvt-perls/
+! URxvt.perl-ext-common: default,selection-autotransform,matcher
 
-#  - keyboard-select
-URxvt.perl-ext-common: keyboard-select
-URxvt.keysym.M-Escape: perl:keyboard-select:activate
-URxvt.keysym.M-s: perl:keyboard-select:search
+! - keyboard-select
+! URxvt.perl-ext-common: keyboard-select
+! URxvt.keysym.M-Escape: perl:keyboard-select:activate
+! URxvt.keysym.M-s: perl:keyboard-select:search
 
-# -- url-select
-#URxvt.perl-ext-common: url-select
-#URxvt.keysym.M-u: perl:url-select:select_next
-#URxvt.url-select.underline
+! -- url-select
+! URxvt.perl-ext-common: url-select
+! URxvt.keysym.M-u: perl:url-select:select_next
+! URxvt.url-select.underline
 
-#  - clipboard
+! - clipboard
 URxvt.perl-ext-common: selection-to-clipboard
-
-# Fixing URxvt copy/paste | Ivan Tomica
-# - https://www.tomica.net/blog/2019/01/fixing-urxvt-copy-paste/
-URxvt.keysym.Shift-Control-V: paste-clipboard
-URxvt.keysym.Shift-Control-C: selection-to-clipboard
-URxvt.iso14755: false
-URxvt.iso14755_52: false
