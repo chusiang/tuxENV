@@ -459,6 +459,12 @@ font:
 #  program: /bin/bash
 #  args:
 #    - --login
+shell:
+  program: /bin/bash
+  args:
+    - -l
+    - -c
+    - "tmux attach || tmux"
 
 # Startup directory
 #

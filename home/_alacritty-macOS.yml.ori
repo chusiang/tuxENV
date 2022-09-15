@@ -61,7 +61,8 @@ window:
   # Values for `decorations` (macOS only):
   #     - transparent: Title bar, transparent background and title bar buttons
   #     - buttonless: Title bar, transparent background and no title bar buttons
-  decorations: none
+  # decorations: none
+  decorations: full
 
   # Background opacity
   #
@@ -156,7 +157,7 @@ font:
     #style: Bold Italic
 
   # Point size
-  size: 14.0
+  size: 18.0
 
   # Offset is the extra space around each character. `offset.y` can be thought
   # of as modifying the line spacing, and `offset.x` as modifying the letter
@@ -189,7 +190,7 @@ font:
 #draw_bold_text_with_bright_colors: false
 
 # Colors (Tomorrow Night)
-colors:
+#colors:
   # Default colors
   #primary:
   #  background: '#1d1f21'
@@ -281,25 +282,25 @@ colors:
 
   # Normal colors
   normal:
-    # Default.
-    # black:   '#1d1f21'
-    # red:     '#cc6666'
-    # green:   '#b5bd68'
-    # yellow:  '#f0c674'
-    # blue:    '#81a2be'
-    # magenta: '#b294bb'
-    # cyan:    '#8abeb7'
-    # white:   '#c5c8c6'
+  #  # Default.
+  #  black:   '#1d1f21'
+  #  red:     '#cc6666'
+  #  green:   '#b5bd68'
+  #  yellow:  '#f0c674'
+  #  blue:    '#81a2be'
+  #  magenta: '#b294bb'
+  #  cyan:    '#8abeb7'
+  #  white:   '#c5c8c6'
 
-    # terminal.sexy.
-    # black:   '#373b41'
-    # red:     '#cc6666'
-    # green:   '#b5bd68'
-    # yellow:  '#f0c674'
-    # blue:    '#81a2be'
-    # magenta: '#b294bb'
-    # cyan:    '#8abeb7'
-    # white:   '#c5c8c6'
+  #  # terminal.sexy.
+  #  black:   '#373b41'
+  #  red:     '#cc6666'
+  #  green:   '#b5bd68'
+  #  yellow:  '#f0c674'
+  #  blue:    '#81a2be'
+  #  magenta: '#b294bb'
+  #  cyan:    '#8abeb7'
+  #  white:   '#c5c8c6'
 
     # base16-tomorrow-night-eighties.vim.
     black:   '#373b41'
@@ -458,12 +459,6 @@ colors:
 #  program: /bin/bash
 #  args:
 #    - --login
-shell:
-  program: /bin/bash
-  args:
-    - -l
-    - -c
-    - "tmux attach || tmux"
 
 # Startup directory
 #
