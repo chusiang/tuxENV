@@ -2,7 +2,7 @@
 #  Author: Chu-Siang Lai / chusiang (at) drx.tw
 #  Blog: http://note.drx.tw
 #  Filename: _gitconfig
-#  Modified: 2021-09-09 14:32
+#  Modified: 2022-11-30 16:39
 #  Description: config for git.
 # =============================================================================
 
@@ -13,6 +13,9 @@
 
 # [commit]
 #   gpgsign = true
+
+[init]
+  defaultBranch = main
 
 [format]
   signoff = true
