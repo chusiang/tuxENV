@@ -1,27 +1,15 @@
 # ==============================================================================
-#  Author: 凍仁翔 / chusiang.lai (at) gmail.com
+#  Author: Chu-Siang Lai / chusiang (at) drx.tw
 #  Blog: http://note.drx.tw
 #  Filename: _bash_aliases
-#  Modified: 2019-01-21 12:13
-#  Description: alias config for bashrc.
+#  Modified: 2022-12-18 04:30
+#  Description: Alias config of bashrc.
 # ==============================================================================
 
 #!/bin/bash
 
 # Color
 # ======
-
-# color the files of directory, zip, execute ... etc.
-if [ "$(uname)" == "Darwin" ]; then
-  # Set CLICOLOR if you want Ansi Colors in iTerm2.
-  export CLICOLOR=1
-  export LS_OPTIONS='--color=auto'
-  alias ls='ls $LS_OPTIONS'
-else
-  eval "`dircolors`"
-  export LS_OPTIONS='--color=auto'
-  alias ls='ls $LS_OPTIONS'
-fi
 
 # color the diff.
 if [ -f /usr/bin/colordiff ]; then
