@@ -15,6 +15,8 @@
 if [ "$(uname)" == "Darwin" ]; then
   # Set CLICOLOR if you want Ansi Colors in iTerm2.
   export CLICOLOR=1
+  export LS_OPTIONS='--color=auto'
+  alias ls='ls $LS_OPTIONS'
 else
   eval "`dircolors`"
   export LS_OPTIONS='--color=auto'
