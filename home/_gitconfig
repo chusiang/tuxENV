@@ -2,7 +2,7 @@
 #  Author: Chu-Siang Lai / chusiang (at) drx.tw
 #  Blog: http://note.drx.tw
 #  Filename: _gitconfig
-#  Modified: 2022-11-30 16:39
+#  Modified: 2023-07-25 15:17
 #  Description: config for git.
 # =============================================================================
 
@@ -27,13 +27,6 @@
   log = auto
   status = auto
   ui = auto
-
-# Diff with vimdiff.
-# [diff]
-#   external = git_diff_wrapper
-#
-# [pager]
-#   diff =
 
 [fetch]
   prune = true
@@ -70,3 +63,38 @@
   re2Front = reset --soft HEAD^
   ta    = tag -l
   tl    = tag -l
+
+# = Diff with external ========================================================
+
+# - vimdiff -------------------------------------------------------------------
+#
+# [diff]
+#   external = git_diff_wrapper
+#
+# [pager]
+#   diff =
+
+# - delta ---------------------------------------------------------------------
+#
+[core]
+  pager         = delta
+
+[interactive]
+  diffFilter    = delta --color-only
+
+[delta]
+  # set to true if you're in a terminal w/ a light background color (e.g. the default macOS terminal)
+  # light         = false
+  dark          = true
+
+  # use n and N to move between diff sections.
+  navigate      = true
+
+  diff-so-fancy = true
+  side-by-side  = true
+
+[merge]
+  conflictstyle = diff3
+
+[diff]
+  colorMoved    = default
