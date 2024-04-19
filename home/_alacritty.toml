@@ -1,0 +1,40 @@
+working_directory = "/home/jonny.lai/vcs/lw/"
+
+[colors.normal]
+black = "#373b41"
+blue = "#6699cc"
+cyan = "#66cccc"
+green = "#99cc99"
+magenta = "#cc99cc"
+red = "#f2777a"
+white = "#ffffff"
+yellow = "#ffcc66"
+
+[font]
+size = 14.0
+
+[font.bold]
+family = "Source Code Pro Medium"
+
+[font.normal]
+family = "Source Code Pro"
+
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Alt"
+
+[mouse]
+hide_when_typing = true
+
+[shell]
+args = ["-l", "-c", "tmux attach || tmux"]
+program = "/bin/bash"
+
+[window]
+decorations = "none"
