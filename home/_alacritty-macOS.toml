@@ -1,0 +1,45 @@
+# Alacritty terminal configuration for v0.13.2+ on macOS.
+
+[font]
+size    = 18.0
+
+[font.normal]
+family  = "Source Code Pro for Powerline"
+style   = "Regular"
+
+[font.bold]
+family  = "Source Code Pro for Powerline"
+style   = "Medium"
+
+[font.italic]
+family  = "Source Code Pro for Powerline"
+style   = "Italic"
+
+[font.bold_italic]
+family  = "Source Code Pro for Powerline"
+style   = "Bold Italic"
+
+# Colors (Tomorrow Night)
+[colors.primary]
+background = "#262626"
+foreground = "#C6C2BB"
+
+[colors.normal]
+# base16-tomorrow-night-eighties.vim
+black   = "#373b41"
+red     = "#f2777a"
+green   = "#99cc99"
+yellow  = "#ffcc66"
+blue    = "#6699cc"
+magenta = "#cc99cc"
+cyan    = "#66cccc"
+white   = "#ffffff"
+
+[shell]
+program = "/usr/local/bin/bash"
+args    = [ "-l", "-c", "tmux attach || tmux" ]
+
+[mouse]
+hide_when_typing = true
+
+# vim: ft=toml
