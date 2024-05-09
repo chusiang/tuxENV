@@ -1,22 +1,26 @@
 # Alacritty terminal configuration for v0.13.2+ on macOS.
 
+# SauceCodePro Nerd Font: Fork from "Source Code Pro" font.
+#
+# > https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/SourceCodePro.zip
+
 [font]
 size    = 18.0
 
 [font.normal]
-family  = "Source Code Pro for Powerline"
+family  = "SauceCodePro Nerd Font"
 style   = "Regular"
 
 [font.bold]
-family  = "Source Code Pro for Powerline"
+family  = "SauceCodePro Nerd Font"
 style   = "Medium"
 
 [font.italic]
-family  = "Source Code Pro for Powerline"
+family  = "SauceCodePro Nerd Font"
 style   = "Italic"
 
 [font.bold_italic]
-family  = "Source Code Pro for Powerline"
+family  = "SauceCodePro Nerd Font"
 style   = "Bold Italic"
 
 # Colors (Tomorrow Night)
