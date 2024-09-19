@@ -3,23 +3,23 @@
 working_directory = "C:\\Users\\jonny"
 
 [colors.normal]
-black   = "#373b41"
-blue    = "#6699cc"
-cyan    = "#66cccc"
-green   = "#99cc99"
+black = "#373b41"
+blue = "#6699cc"
+cyan = "#66cccc"
+green = "#99cc99"
 magenta = "#cc99cc"
-red     = "#f2777a"
-white   = "#ffffff"
-yellow  = "#ffcc66"
+red = "#f2777a"
+white = "#ffffff"
+yellow = "#ffcc66"
 
 [font]
-size    = 16.0
+size = 16.0
 
 [font.bold]
-family  = "SauceCodePro Nerd Font Medium"
+family = "SauceCodePro Nerd Font Medium"
 
 [font.normal]
-family  = "SauceCodePro Nerd Font"
+family = "SauceCodePro Nerd Font"
 
 [mouse]
 hide_when_typing = true
@@ -27,27 +27,27 @@ hide_when_typing = true
 [shell]
 program = "powershell"
 
-# Auto run `bash-login` command on PowerShell.
+# Auto run `wsl` command on PowerShell.
 #
-#   PS C:\Users\jonny> $command = 'bash --login'
+#   PS C:\Users\jonny> $command = 'wsl'
 #   PS C:\Users\jonny> $bytes = [System.Text.Encoding]::Unicode.GetBytes($command)
 #   PS C:\Users\jonny> $encodedCommand = [Convert]::ToBase64String($bytes)
 #   PS C:\Users\jonny> echo $encodedCommand
-#   YgBhAHMAaAAgAC0ALQBsAG8AZwBpAG4A
+#   dwBzAGwA
 #   PS C:\Users\jonny> powershell.exe -encodedCommand $encodedCommand
-args    = ["-encodedCommand", "YgBhAHMAaAAgAC0ALQBsAG8AZwBpAG4A"]
+args = ["-encodedCommand", "dwBzAGwA"]
 
 # [window]
 # decorations = "none"
 
 [[keyboard.bindings]]
-action  = "Copy"
-key     = "C"
-mods    = "Alt"
+action = "Copy"
+key = "C"
+mods = "Alt"
 
 [[keyboard.bindings]]
-action  = "Paste"
-key     = "V"
-mods    = "Alt"
+action = "Paste"
+key = "V"
+mods = "Alt"
 
 # vim: ft=toml
