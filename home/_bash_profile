@@ -47,6 +47,13 @@ if [ -f "/usr/local/bin/aws_completer" ] ; then
   complete -C '/usr/local/bin/aws_completer' aws
 fi
 
+# K8s - https://kubernetes.io/docs/reference/kubectl/quick-reference/#bash
+if [ -f "/usr/local/bin/kubectl" ] ; then
+  source <(kubectl completion bash)
+  alias k=kubectl
+  complete -o default -F __start_kubectl k
+fi
+
 # ------------------------------------
 # Author : Chu-Siang Lai
 # E-mail : jonny (at) drx.tw
