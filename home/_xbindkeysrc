@@ -71,20 +71,24 @@
 
 # Next page by 'Alt + Right'.
 "xte 'keydown Alt_L' 'keydown Right' 'keyup Alt_L' 'keyup Right'"
-b:8
+  b:8
 
 # Previous page by 'Alt + Left'.
 "xte 'keydown Alt_L' 'keydown Left' 'keyup Alt_L' 'keyup Left'"
-b:9
+  b:9
 
-# Trigger 1Password by 'Super + 8'.
+# Trigger Everntoe (PWA) with mouse button 10 by 'Super + 6'.
+"xte 'keydown Super_L' 'keydown 6' 'keyup Super_L' 'keyup 6'"
+  b:10
+
+# Trigger Everntoe (PWA) with 'Super + E' by 'Super + 6'.
+"xte 'keydown Super_L' 'keydown 6' 'keyup Super_L' 'keyup 6'"
+  Mod2+Mod4 + e + release
+
+# Trigger 1Password with mouse button 11 by 'Super + 8'.
 "xte 'keydown Super_L' 'keydown 8' 'keyup Super_L' 'keyup 8'"
-b:10
+  b:11
 
-# Trigger MS Teams by 'Super + 9'.
+# Trigger MS Teams with mouse button 12 by 'Super + 9'.
 "xte 'keydown Super_L' 'keydown 9' 'keyup Super_L' 'keyup 9'"
-b:11
-
-# Trigger Thunderbird by 'Super + 7'.
-"xte 'keydown Super_L' 'keydown 7' 'keyup Super_L' 'keyup 7'"
-b:12
+  b:12
