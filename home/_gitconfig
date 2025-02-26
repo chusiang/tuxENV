@@ -44,11 +44,12 @@
 
 # Alias and Abbreveviation.
 [alias]
-  co    = checkout
-  ca    = checkout main
-  cd    = checkout develop
-  cm    = commit
-  recm  = commit --amend
+  commit = commit --signoff
+  cm   = commit --signoff
+  recm = commit --amend --signoff
+  co   = checkout
+  ca   = checkout main
+  cd   = checkout develop
   df    = diff
   dfn   = diff --name-only
   st    = status
