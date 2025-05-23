@@ -1,0 +1,19 @@
+Enabled: yes
+Types: deb
+URIs: https://ppa.launchpadcontent.net/mozillateam/ppa/ubuntu/
+Suites: noble
+Components: main
+Signed-By: -----BEGIN PGP PUBLIC KEY BLOCK-----
+ .
+ -----BEGIN PGP PUBLIC KEY BLOCK-----
+ 
+ mI0ESXMwOwEEAL7UP143coSax/7/8UdgD+WjIoIxzqhkTeoGOyw/r2DlRCBPFAOH
+ lsUIG3AZrHcPVzA3bRTGoEYlrQ9d0+FsUI57ozHdmlsaekEJpQ2x7wZL7c1GiRqC
+ A4ERrC6kNJ5ruSUHhB+8qiksLWsTyjM7OjIdkmDbH/dYKdFUEKTdljKHABEBAAG0
+ HkxhdW5jaHBhZCBQUEEgZm9yIE1vemlsbGEgVGVhbYi2BBMBAgAgBQJJczA7AhsD
+ BgsJCAcDAgQVAggDBBYCAwECHgECF4AACgkQm9s9ic5J7CGfEgP/fcx3/CSAyyWL
+ lnL0qjjHmfpPd8MUOKB6u4HBcBNZI2q2CnuZCBNUrMUj67IzPg2llmfXC9WxuS2c
+ MkGu5+AXV+Xoe6pWQd5kP1UZ44boBZH9FvOLArA4nnF2hsx4GYcxVXBvCCgUqv26
+ qrGpaSu9kRpuTY5r6CFdjTNWtwGsPaM=
+ =uNvM
+ -----END PGP PUBLIC KEY BLOCK-----

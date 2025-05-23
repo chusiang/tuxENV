@@ -1,0 +1,5 @@
+Enabled: no
+Types: deb
+URIs: http://ppa.launchpad.net/shutter/ppa/ubuntu
+Suites: focal
+Components: main
