@@ -1,0 +1,62 @@
+# ------------------------------------------------------------------------------
+#   Alacritty terminal configuration for v0.15.1 on GNU/Linux.
+# ------------------------------------------------------------------------------
+
+# general.working_directory = "~"
+
+### Color (base16-tomorrow-night-eighties.vim)
+#
+[colors.normal]
+black = "#373b41"
+blue = "#6699cc"
+cyan = "#66cccc"
+green = "#99cc99"
+magenta = "#cc99cc"
+red = "#f2777a"
+white = "#ffffff"
+yellow = "#ffcc66"
+
+### Font
+#
+# SauceCodePro Nerd Font: Fork from "Source Code Pro" font.
+#
+# > https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/SourceCodePro.zip
+#
+[font]
+size = 14.0
+
+[font.normal]
+family = "SauceCodePro Nerd Font"
+
+# [font.bold]
+# family = "SauceCodePro Nerd Font medium"
+
+### Shell
+#
+[terminal.shell]
+args = ["-l", "-c", "tmux attach || tmux"]
+program = "/bin/bash"
+
+### Bindings
+#
+[[keyboard.bindings]]
+action = "Paste"
+key = "V"
+mods = "Alt"
+
+[[keyboard.bindings]]
+action = "Copy"
+key = "C"
+mods = "Alt"
+
+### Mouse
+#
+[mouse]
+hide_when_typing = true
+
+### Window
+#
+[window]
+decorations = "none"
+
+# vim: ft=toml
