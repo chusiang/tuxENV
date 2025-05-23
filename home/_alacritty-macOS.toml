@@ -1,48 +1,58 @@
-# Alacritty terminal configuration for v0.13.2+ on macOS.
+# ------------------------------------------------------------------------------
+#   Alacritty terminal configuration for v0.15.1 on macOS.
+# ------------------------------------------------------------------------------
 
-# SauceCodePro Nerd Font: Fork from "Source Code Pro" font.
+# general.working_directory = "~"
+
+### Color (base16-tomorrow-night-eighties.vim)
 #
-# > https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/SourceCodePro.zip
-
-[font]
-size    = 18.0
-
-[font.normal]
-family  = "SauceCodePro Nerd Font"
-style   = "Regular"
-
-[font.bold]
-family  = "SauceCodePro Nerd Font"
-style   = "Medium"
-
-[font.italic]
-family  = "SauceCodePro Nerd Font"
-style   = "Italic"
-
-[font.bold_italic]
-family  = "SauceCodePro Nerd Font"
-style   = "Bold Italic"
-
-# Colors (Tomorrow Night)
 [colors.primary]
 background = "#262626"
 foreground = "#C6C2BB"
 
 [colors.normal]
-# base16-tomorrow-night-eighties.vim
-black   = "#373b41"
-red     = "#f2777a"
-green   = "#99cc99"
-yellow  = "#ffcc66"
-blue    = "#6699cc"
+black = "#373b41"
+blue = "#6699cc"
+cyan = "#66cccc"
+green = "#99cc99"
 magenta = "#cc99cc"
-cyan    = "#66cccc"
-white   = "#ffffff"
+red = "#f2777a"
+white = "#ffffff"
+yellow = "#ffcc66"
 
-[shell]
+### Font
+#
+# SauceCodePro Nerd Font: Fork from "Source Code Pro" font.
+#
+# > https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/SourceCodePro.zip
+#
+[font]
+size = 18.0
+
+[font.normal]
+family = "SauceCodePro Nerd Font"
+style = "Regular"
+
+[font.bold]
+family = "SauceCodePro Nerd Font"
+style = "Medium"
+
+[font.italic]
+family = "SauceCodePro Nerd Font"
+style = "Italic"
+
+[font.bold_italic]
+family = "SauceCodePro Nerd Font"
+style = "Bold Italic"
+
+### Shell
+#
+[terminal.shell]
 program = "/usr/local/bin/bash"
-args    = [ "-l", "-c", "tmux attach || tmux" ]
+args = ["-l", "-c", "tmux attach || tmux"]
 
+### Mouse
+#
 [mouse]
 hide_when_typing = true
 
