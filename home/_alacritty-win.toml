@@ -1,6 +1,6 @@
-# Alacritty terminal configuration for v0.13.2+ on Windows 11.
+# Alacritty terminal configuration for v0.15.1+ on Windows 11.
 
-working_directory = "C:\\Users\\jonny"
+general.working_directory = "C:\\Users\\jonny"
 
 [colors.normal]
 black = "#373b41"
@@ -24,7 +24,7 @@ family = "SauceCodePro Nerd Font"
 [mouse]
 hide_when_typing = true
 
-[shell]
+[terminal.shell]
 program = "powershell"
 
 # Auto run `wsl` command on PowerShell.
