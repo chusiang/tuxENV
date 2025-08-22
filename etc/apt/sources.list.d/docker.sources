@@ -1,0 +1,8 @@
+Types: deb
+Enabled: yes
+URIs: https://download.docker.com/linux/ubuntu
+Suites: noble
+Components: stable
+Architectures: amd64
+Trusted: yes
+Signed-By: /etc/apt/keyrings/docker.asc
