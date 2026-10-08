@@ -1,0 +1,20 @@
+# - Theme ------------------------------------------------------------
+
+font-family = SauceCodePro Nerd Font
+font-size = 14
+
+theme = dark:Tomorrow Night Eighties,light:Tomorrow
+background-opacity = 0.95
+
+# gtk-titlebar = false
+
+# - NeoVim support ---------------------------------------------------
+
+term = xterm-ghostty
+shell-integration = bash
+shell-integration-features = cursor,sudo,title
+
+# - Keybind ----------------------------------------------------------
+
+# keybind = alt+c=copy_to_clipboard:plain
+keybind = alt+v=paste_from_clipboard
