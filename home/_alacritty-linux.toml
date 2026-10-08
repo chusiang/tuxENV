@@ -58,5 +58,6 @@ hide_when_typing = true
 #
 [window]
 decorations = "none"
+opacity = 0.95
 
 # vim: ft=toml
