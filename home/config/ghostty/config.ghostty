@@ -16,5 +16,12 @@ shell-integration-features = cursor,sudo,title
 
 # - Keybind ----------------------------------------------------------
 
+### Copy & Paste
+#
 # keybind = alt+c=copy_to_clipboard:plain
 keybind = alt+v=paste_from_clipboard
+
+### Tmux
+#
+keybind = cmd+j=text:\x01\x6e
+keybind = cmd+k=text:\x01\x70
