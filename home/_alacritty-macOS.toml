@@ -56,4 +56,18 @@ args = ["-l", "-c", "tmux attach || tmux"]
 [mouse]
 hide_when_typing = true
 
+# - Window ----------------------------------------------------------
+
+[window]
+opacity = 0.95
+
+# - Keybinding ------------------------------------------------------
+
+[keyboard]
+bindings = [
+  # For macOS.
+  { key = "j", mods = "Command", chars = "\x01\x6e" },
+  { key = "k", mods = "Command", chars = "\x01\x70" },
+]
+
 # vim: ft=toml
