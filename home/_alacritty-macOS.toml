@@ -1,11 +1,11 @@
-# ------------------------------------------------------------------------------
-#   Alacritty terminal configuration for v0.15.1 on macOS.
-# ------------------------------------------------------------------------------
+# --------------------------------------------------------------------
+#   Alacritty terminal configuration for v0.17.0 on macOS.
+# --------------------------------------------------------------------
 
 # general.working_directory = "~"
 
-### Color (base16-tomorrow-night-eighties.vim)
-#
+# - Color (base16-tomorrow-night-eighties.vim) -----------------------
+
 [colors.primary]
 background = "#262626"
 foreground = "#C6C2BB"
@@ -20,12 +20,12 @@ red = "#f2777a"
 white = "#ffffff"
 yellow = "#ffcc66"
 
-### Font
-#
+# - Font -------------------------------------------------------------
+
 # SauceCodePro Nerd Font: Fork from "Source Code Pro" font.
 #
 # > https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/SourceCodePro.zip
-#
+
 [font]
 size = 18.0
 
@@ -45,14 +45,14 @@ style = "Italic"
 family = "SauceCodePro Nerd Font"
 style = "Bold Italic"
 
-### Shell
-#
+# - Shell -----------------------------------------------------------
+
 [terminal.shell]
 program = "/usr/local/bin/bash"
 args = ["-l", "-c", "tmux attach || tmux"]
 
-### Mouse
-#
+# - Mouse -----------------------------------------------------------
+
 [mouse]
 hide_when_typing = true
 
