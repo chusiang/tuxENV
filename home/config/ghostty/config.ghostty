@@ -12,7 +12,8 @@ background-opacity = 0.95
 
 term = xterm-ghostty
 shell-integration = bash
-shell-integration-features = cursor,sudo,title
+shell-integration-features = no-cursor,sudo,title
+cursor-style = block
 
 # - Keybind ----------------------------------------------------------
 
