@@ -19,7 +19,7 @@ cursor-style = block
 
 ### Copy & Paste
 #
-# keybind = alt+c=copy_to_clipboard:plain
+keybind = alt+c=copy_to_clipboard:mixed
 keybind = alt+v=paste_from_clipboard
 
 ### Tmux
